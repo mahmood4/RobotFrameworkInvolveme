@@ -13,11 +13,16 @@ ${FILE_TO_UPLOAD}   Sample.jpg
 *** Keywords ***
 create_workspace
      sleep  2s
+     wait until page contains element    ${RATING}
+     common.Click For Element       ${RATING}
+     sleep  2s
      common.Click For Element         ${CREATE_NEW_WORKSPACE_BUTTON}
      [Arguments]                      ${nameC}
 
      ${before}=    Get Count of Elements   ${WORKSPACE_LIST}
+     sleep  1s
      log to console        ${before}
+     sleep  1s
      common.Input For Text            ${NEW_WORKSPACE_NAME_FIELD}         ${nameC}
      common.Click For Element         ${CONFIRMATION_BUTTON}
      sleep  2s

@@ -1,4 +1,6 @@
     #  _START_BUTTON = (By.CSS_SELECTOR, "#app .px-4 a")
+RATING ="xpath://*[name()='path' and contains(@d,'M255.1 222')]"
+
 START_BUTTON = "xpath://button[@class='hidden px-3 py-2 text-white bg-teal-800 rounded-md shadow-md md:block hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600']"
 CREATE_NEW_WORKSPACE_BUTTON = "css:.font-medium button"
 #CREATE_NEW_WORKSPACE_BUTTON = "xpath://button[@data-intercom-target='project-overview-workspaces-new']//*[name()='svg']//*[name()='path' and contains(@fill,'currentCol')]"
@@ -11,6 +13,7 @@ DELETE_WORKSPACE_BUTTON = "xpath://button[@class ='block pr-4 pl-4 w-full text-s
 RENAME_FIELD = "css:.vue-portal-target input"
 CONFIRMATION_BUTTON = "css:#confirm-create-button"
 NEW_WORKSPACE_NAME_FIELD = "css:[placeholder='Workspace name']"
+#NEW_WORKSPACE_NAME_FIELD = "xpath://input[@id='text-vtgafv-bdjwjv']"
 # _DELETE_WORKSPACE_FIELD = (By.CSS_SELECTOR, ".h-12")
 DELETE_WORKSPACE_FIELD = "xpath://input[@type='text']"
 # _CREATE_PROJECT_BUTTON = (By.CSS_SELECTOR, ".hidden.px-3")

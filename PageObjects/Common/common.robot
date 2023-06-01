@@ -5,6 +5,7 @@
 Library     SeleniumLibrary   15.0    5.0
 Library    OperatingSystem
 Library           highlight.py
+Variables   ../LoginPage/LoginUI.py
 Library           browser.py
 Resource    ../LoginPage/LoginKW.robot
 
@@ -116,6 +117,8 @@ Get elements
     [Return]    @{workspaces}
 
 Login to the Application
+
+    wait until page contains element     ${CLICK_COOKIE}
     Click Cookie
     Click On Link Login
     Enter Email                          sabree4u2@gmail.com
