@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20230510 17:59:50.919" rpa="false" schemaversion="3">
+<suite id="s1" name="ForgotPassword" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\ForgotPassword\ForgotPassword.robot">
+<test id="s1-t1" name="Valid EMail" line="11">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230510 17:59:51.348" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0443D388&gt;</msg>
+<status status="PASS" starttime="20230510 17:59:51.347" endtime="20230510 17:59:51.348"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230510 17:59:51.348" endtime="20230510 17:59:51.349"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230510 17:59:51.349" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230510 17:59:51.349" endtime="20230510 17:59:52.976"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 17:59:52.978" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230510 17:59:52.977" endtime="20230510 17:59:56.203"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230510 17:59:56.206" level="INFO">${handles} = ['0E9DF705D7D1301345CE8C7591FE5679']</msg>
+<status status="PASS" starttime="20230510 17:59:56.203" endtime="20230510 17:59:56.206"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230510 17:59:56.206" endtime="20230510 17:59:56.502"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230510 17:59:56.723" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230510 17:59:56.503" endtime="20230510 17:59:56.723"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230510 17:59:56.724" endtime="20230510 17:59:56.724"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:56.502" endtime="20230510 17:59:56.725"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230510 17:59:56.727" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json"&gt;C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230510 17:59:56.728" level="INFO">${JSONContent} = {
+    "name": "test",
+    "new_name": "another test",
+    "project_type": "score-based outcomes",
+    "template_type": "Start from scratch",
+    "project_name": "test project",
+    "final_slide": "Tha...</msg>
+<status status="PASS" starttime="20230510 17:59:56.726" endtime="20230510 17:59:56.728"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230510 17:59:56.729" level="INFO">${page} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230510 17:59:56.728" endtime="20230510 17:59:56.729"/>
+</kw>
+<msg timestamp="20230510 17:59:56.730" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230510 17:59:56.725" endtime="20230510 17:59:56.730"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230510 17:59:56.731" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230510 17:59:56.730" endtime="20230510 17:59:56.732"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:51.347" endtime="20230510 17:59:56.732"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 17:59:57.748" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230510 17:59:56.733" endtime="20230510 17:59:57.748"/>
+</kw>
+<kw name="Click Cookie" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${CLICK_COOKIE}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 17:59:57.750" endtime="20230510 17:59:57.823"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 17:59:57.824" level="INFO">Clicking element 'xpath://div[@id='cookiescript_accept']'.</msg>
+<status status="PASS" starttime="20230510 17:59:57.823" endtime="20230510 17:59:57.997"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:57.749" endtime="20230510 17:59:57.997"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:57.749" endtime="20230510 17:59:57.997"/>
+</kw>
+<kw name="Click On Link Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${LOGIN_LINK}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 17:59:58.000" endtime="20230510 17:59:58.067"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 17:59:58.070" level="INFO">Clicking element 'xpath://*[@id='button_tracking-id_login_nav-bar']'.</msg>
+<status status="PASS" starttime="20230510 17:59:58.067" endtime="20230510 17:59:59.647"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:57.999" endtime="20230510 17:59:59.647"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:57.998" endtime="20230510 17:59:59.648"/>
+</kw>
+<kw name="Click On Forgot Password Link" library="ForgotPasswordKW">
+<kw name="Click For Element" library="common">
+<arg>${FORGOT_PASSWORD_LINK}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 17:59:59.651" endtime="20230510 17:59:59.756"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 17:59:59.758" level="INFO">Clicking element 'css:[href='https://app.involve.me/password/reset']'.</msg>
+<status status="PASS" starttime="20230510 17:59:59.757" endtime="20230510 18:00:00.839"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:59.650" endtime="20230510 18:00:00.840"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:59.649" endtime="20230510 18:00:00.840"/>
+</kw>
+<kw name="send password reset link" library="ForgotPasswordKW">
+<arg>sabree4u2@gmail.com</arg>
+<kw name="Input For Text" library="common">
+<arg>${EMAIL_FIELD}</arg>
+<arg>${nameTxt}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 18:00:00.842" endtime="20230510 18:00:00.896"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 18:00:00.897" level="INFO">Typing text 'sabree4u2@gmail.com' into text field 'css:[type=email]'.</msg>
+<status status="PASS" starttime="20230510 18:00:00.896" endtime="20230510 18:00:01.057"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:00.841" endtime="20230510 18:00:01.058"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${SEND_PASSWORD_RESET_LINK_BUTTON}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 18:00:01.059" endtime="20230510 18:00:01.085"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 18:00:01.086" level="INFO">Clicking element 'xpath://span[contains(text(),'Send Password Reset Link')]'.</msg>
+<status status="PASS" starttime="20230510 18:00:01.085" endtime="20230510 18:00:01.200"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:01.058" endtime="20230510 18:00:01.200"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:00.840" endtime="20230510 18:00:01.201"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 18:00:03.211" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230510 18:00:01.202" endtime="20230510 18:00:03.212"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230510 18:00:03.213" endtime="20230510 18:00:09.561"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:01.201" endtime="20230510 18:00:09.561"/>
+</kw>
+<status status="PASS" starttime="20230510 17:59:51.346" endtime="20230510 18:00:09.563"/>
+</test>
+<test id="s1-t2" name="Invalid Email" line="18">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230510 18:00:09.571" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x044D47A8&gt;</msg>
+<status status="PASS" starttime="20230510 18:00:09.570" endtime="20230510 18:00:09.572"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230510 18:00:09.572" endtime="20230510 18:00:09.573"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230510 18:00:09.575" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230510 18:00:09.574" endtime="20230510 18:00:11.041"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230510 18:00:11.042" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230510 18:00:11.041" endtime="20230510 18:00:14.225"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230510 18:00:14.241" level="INFO">${handles} = ['000CE26F11FDA0A9FAC48BB543F878AB']</msg>
+<status status="PASS" starttime="20230510 18:00:14.226" endtime="20230510 18:00:14.241"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230510 18:00:14.242" endtime="20230510 18:00:14.530"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230510 18:00:14.755" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230510 18:00:14.531" endtime="20230510 18:00:14.755"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230510 18:00:14.755" endtime="20230510 18:00:14.759"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:14.530" endtime="20230510 18:00:14.759"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230510 18:00:14.761" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json"&gt;C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230510 18:00:14.762" level="INFO">${JSONContent} = {
+    "name": "test",
+    "new_name": "another test",
+    "project_type": "score-based outcomes",
+    "template_type": "Start from scratch",
+    "project_name": "test project",
+    "final_slide": "Tha...</msg>
+<status status="PASS" starttime="20230510 18:00:14.760" endtime="20230510 18:00:14.762"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230510 18:00:14.763" level="INFO">${page} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230510 18:00:14.762" endtime="20230510 18:00:14.763"/>
+</kw>
+<msg timestamp="20230510 18:00:14.763" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230510 18:00:14.760" endtime="20230510 18:00:14.763"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230510 18:00:14.765" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230510 18:00:14.764" endtime="20230510 18:00:14.765"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:09.569" endtime="20230510 18:00:14.766"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 18:00:15.781" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230510 18:00:14.767" endtime="20230510 18:00:15.781"/>
+</kw>
+<kw name="Click Cookie" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${CLICK_COOKIE}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 18:00:15.784" endtime="20230510 18:00:15.851"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 18:00:15.853" level="INFO">Clicking element 'xpath://div[@id='cookiescript_accept']'.</msg>
+<status status="PASS" starttime="20230510 18:00:15.852" endtime="20230510 18:00:16.023"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:15.783" endtime="20230510 18:00:16.023"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:15.782" endtime="20230510 18:00:16.024"/>
+</kw>
+<kw name="Click On Link Login" library="LoginKW">
+<kw name="Click For Element" library="common">
+<arg>${LOGIN_LINK}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 18:00:16.027" endtime="20230510 18:00:16.195"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 18:00:16.197" level="INFO">Clicking element 'xpath://*[@id='button_tracking-id_login_nav-bar']'.</msg>
+<status status="PASS" starttime="20230510 18:00:16.196" endtime="20230510 18:00:17.786"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:16.026" endtime="20230510 18:00:17.787"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:16.025" endtime="20230510 18:00:17.787"/>
+</kw>
+<kw name="Click On Forgot Password Link" library="ForgotPasswordKW">
+<kw name="Click For Element" library="common">
+<arg>${FORGOT_PASSWORD_LINK}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 18:00:17.789" endtime="20230510 18:00:17.815"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 18:00:17.816" level="INFO">Clicking element 'css:[href='https://app.involve.me/password/reset']'.</msg>
+<status status="PASS" starttime="20230510 18:00:17.816" endtime="20230510 18:00:18.989"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:17.788" endtime="20230510 18:00:18.990"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:17.788" endtime="20230510 18:00:18.990"/>
+</kw>
+<kw name="send password reset link" library="ForgotPasswordKW">
+<arg>sabrxee4u2@gmail.com</arg>
+<kw name="Input For Text" library="common">
+<arg>${EMAIL_FIELD}</arg>
+<arg>${nameTxt}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 18:00:18.992" endtime="20230510 18:00:19.300"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230510 18:00:19.302" level="INFO">Typing text 'sabrxee4u2@gmail.com' into text field 'css:[type=email]'.</msg>
+<status status="PASS" starttime="20230510 18:00:19.301" endtime="20230510 18:00:19.445"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:18.991" endtime="20230510 18:00:19.445"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${SEND_PASSWORD_RESET_LINK_BUTTON}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230510 18:00:19.446" endtime="20230510 18:00:19.474"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230510 18:00:19.475" level="INFO">Clicking element 'xpath://span[contains(text(),'Send Password Reset Link')]'.</msg>
+<status status="PASS" starttime="20230510 18:00:19.475" endtime="20230510 18:00:19.539"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:19.445" endtime="20230510 18:00:19.540"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:18.991" endtime="20230510 18:00:19.540"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230510 18:00:21.551" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230510 18:00:19.542" endtime="20230510 18:00:21.552"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230510 18:00:21.554" endtime="20230510 18:00:27.900"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:19.541" endtime="20230510 18:00:27.900"/>
+</kw>
+<status status="PASS" starttime="20230510 18:00:09.568" endtime="20230510 18:00:27.901"/>
+</test>
+<doc>Test Case Login</doc>
+<status status="PASS" starttime="20230510 17:59:50.921" endtime="20230510 18:00:27.905"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="ForgotPassword">ForgotPassword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

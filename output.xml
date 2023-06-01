@@ -1,0 +1,2071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20230519 06:23:15.003" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases">
+<suite id="s1-s1" name="ForgotPassword" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\ForgotPassword">
+<suite id="s1-s1-s1" name="ForgotPassword" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\ForgotPassword\ForgotPassword.robot">
+<test id="s1-s1-s1-t1" name="Valid EMail" line="11">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 06:23:15.441" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x040696B8&gt;</msg>
+<status status="PASS" starttime="20230519 06:23:15.441" endtime="20230519 06:23:15.441"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:23:15.441" endtime="20230519 06:23:15.441"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 06:23:15.441" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 06:23:15.441" endtime="20230519 06:23:17.363"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 06:23:17.364" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 06:23:17.364" endtime="20230519 06:23:19.705"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 06:23:19.715" level="INFO">${handles} = ['2A4676A1053A0227B6A58ABF4085E720']</msg>
+<status status="PASS" starttime="20230519 06:23:19.705" endtime="20230519 06:23:19.715"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 06:23:19.715" endtime="20230519 06:23:20.035"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 06:23:20.318" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 06:23:20.036" endtime="20230519 06:23:20.318"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:23:20.318" endtime="20230519 06:23:20.318"/>
+</kw>
+<status status="PASS" starttime="20230519 06:23:20.035" endtime="20230519 06:23:20.318"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 06:23:20.318" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 06:23:20.318" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 06:23:20.318" endtime="20230519 06:23:20.318"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 06:23:20.318" endtime="20230519 06:23:20.318"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:20.318" endtime="20230519 06:23:20.318"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 06:23:20.318" endtime="20230519 06:23:20.318"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:15.441" endtime="20230519 06:23:20.318"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 06:23:22.348" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 06:23:20.334" endtime="20230519 06:23:22.348"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 06:23:22.348" endtime="20230519 06:23:28.982"/>
+</kw>
+<status status="PASS" starttime="20230519 06:23:20.334" endtime="20230519 06:23:28.982"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:15.441" endtime="20230519 06:23:28.982">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<test id="s1-s1-s1-t2" name="Invalid Email" line="19">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 06:23:28.982" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04114418&gt;</msg>
+<status status="PASS" starttime="20230519 06:23:28.982" endtime="20230519 06:23:28.982"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:23:28.982" endtime="20230519 06:23:28.982"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 06:23:28.997" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 06:23:28.997" endtime="20230519 06:23:30.697"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 06:23:30.697" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 06:23:30.697" endtime="20230519 06:23:33.067"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 06:23:33.075" level="INFO">${handles} = ['1E5E54220D56B5C22F5C9F5F26B08EC3']</msg>
+<status status="PASS" starttime="20230519 06:23:33.067" endtime="20230519 06:23:33.075"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 06:23:33.076" endtime="20230519 06:23:33.380"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 06:23:33.677" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 06:23:33.380" endtime="20230519 06:23:33.677"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:23:33.677" endtime="20230519 06:23:33.677"/>
+</kw>
+<status status="PASS" starttime="20230519 06:23:33.380" endtime="20230519 06:23:33.677"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 06:23:33.677" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 06:23:33.677" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 06:23:33.677" endtime="20230519 06:23:33.677"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 06:23:33.677" endtime="20230519 06:23:33.677"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:33.677" endtime="20230519 06:23:33.677"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 06:23:33.677" endtime="20230519 06:23:33.677"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:28.982" endtime="20230519 06:23:33.677"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 06:23:35.685" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 06:23:33.677" endtime="20230519 06:23:35.685"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 06:23:35.685" endtime="20230519 06:23:42.251"/>
+</kw>
+<status status="PASS" starttime="20230519 06:23:33.677" endtime="20230519 06:23:42.251"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:28.982" endtime="20230519 06:23:42.251">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<doc>Test Case Login</doc>
+<status status="FAIL" starttime="20230519 06:23:15.050" endtime="20230519 06:23:42.251"/>
+</suite>
+<status status="FAIL" starttime="20230519 06:23:15.050" endtime="20230519 06:23:42.266"/>
+</suite>
+<suite id="s1-s2" name="Login" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login">
+<suite id="s1-s2-s1" name="ContactTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\ContactTC.robot">
+<test id="s1-s2-s1-t1" name="Test Contact" line="11">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 06:23:42.313" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 06:23:42.313" endtime="20230519 06:23:42.313"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 06:23:44.330" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 06:23:42.329" endtime="20230519 06:23:44.330"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 06:23:44.330" endtime="20230519 06:23:44.330"/>
+</kw>
+<status status="PASS" starttime="20230519 06:23:42.329" endtime="20230519 06:23:44.330"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:42.313" endtime="20230519 06:23:44.330">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<doc>Test Case Login</doc>
+<status status="FAIL" starttime="20230519 06:23:42.282" endtime="20230519 06:23:44.330"/>
+</suite>
+<suite id="s1-s2-s2" name="LoginTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\LoginTC.robot">
+<test id="s1-s2-s2-t1" name="Test Login" line="10">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 06:23:44.376" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x03FDDF10&gt;</msg>
+<status status="PASS" starttime="20230519 06:23:44.376" endtime="20230519 06:23:44.376"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:23:44.376" endtime="20230519 06:23:44.376"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 06:23:44.392" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 06:23:44.376" endtime="20230519 06:23:46.003"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 06:23:46.003" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 06:23:46.003" endtime="20230519 06:23:48.333"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 06:23:48.335" level="INFO">${handles} = ['AF1013B8CDC6F2452CEB44D483F396A0']</msg>
+<status status="PASS" starttime="20230519 06:23:48.333" endtime="20230519 06:23:48.335"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 06:23:48.335" endtime="20230519 06:23:48.655"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 06:23:48.951" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 06:23:48.655" endtime="20230519 06:23:48.951"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:23:48.951" endtime="20230519 06:23:48.951"/>
+</kw>
+<status status="PASS" starttime="20230519 06:23:48.655" endtime="20230519 06:23:48.951"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 06:23:48.966" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 06:23:48.966" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 06:23:48.966" endtime="20230519 06:23:48.966"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 06:23:48.966" endtime="20230519 06:23:48.966"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:48.951" endtime="20230519 06:23:48.966"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 06:23:48.966" endtime="20230519 06:23:48.966"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:44.376" endtime="20230519 06:23:48.966"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 06:23:50.978" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 06:23:48.966" endtime="20230519 06:23:50.978"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 06:23:50.978" endtime="20230519 06:23:58.458"/>
+</kw>
+<status status="PASS" starttime="20230519 06:23:48.966" endtime="20230519 06:23:58.458"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:44.376" endtime="20230519 06:23:58.458">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<test id="s1-s2-s2-t2" name="Test Login N Logout" line="19">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 06:23:58.473" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0412CD60&gt;</msg>
+<status status="PASS" starttime="20230519 06:23:58.473" endtime="20230519 06:23:58.473"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:23:58.473" endtime="20230519 06:23:58.473"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 06:23:58.473" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 06:23:58.473" endtime="20230519 06:24:00.130"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 06:24:00.132" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 06:24:00.131" endtime="20230519 06:24:02.561"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 06:24:02.561" level="INFO">${handles} = ['8B539026BE6647E9124DC88E11CB9BCE']</msg>
+<status status="PASS" starttime="20230519 06:24:02.561" endtime="20230519 06:24:02.561"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 06:24:02.561" endtime="20230519 06:24:02.882"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 06:24:03.176" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 06:24:02.883" endtime="20230519 06:24:03.176"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:24:03.191" endtime="20230519 06:24:03.191"/>
+</kw>
+<status status="PASS" starttime="20230519 06:24:02.882" endtime="20230519 06:24:03.191"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 06:24:03.191" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 06:24:03.191" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 06:24:03.191" endtime="20230519 06:24:03.191"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 06:24:03.191" endtime="20230519 06:24:03.191"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:24:03.191" endtime="20230519 06:24:03.191"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 06:24:03.191" endtime="20230519 06:24:03.191"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:58.458" endtime="20230519 06:24:03.191"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 06:24:05.215" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 06:24:03.207" endtime="20230519 06:24:05.215"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 06:24:05.215" endtime="20230519 06:24:12.027"/>
+</kw>
+<status status="PASS" starttime="20230519 06:24:03.191" endtime="20230519 06:24:12.027"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:23:58.458" endtime="20230519 06:24:12.027">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<test id="s1-s2-s2-t3" name="Test Invalid Login" line="30">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 06:24:12.027" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x03FFE2C8&gt;</msg>
+<status status="PASS" starttime="20230519 06:24:12.027" endtime="20230519 06:24:12.027"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 06:24:12.027" endtime="20230519 06:24:12.027"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 06:24:12.027" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230519 09:24:19.543" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230519 09:24:19.543" level="FAIL">WebDriverException: Message: unknown error: DevToolsActivePort file doesn't exist
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00408893+48451]
+	(No symbol) [0x0039B8A1]
+	(No symbol) [0x002A5058]
+	(No symbol) [0x002C5304]
+	(No symbol) [0x002C1951]
+	(No symbol) [0x002C0019]
+	(No symbol) [0x002F0798]
+	(No symbol) [0x002F047C]
+	(No symbol) [0x002EA0B6]
+	(No symbol) [0x002C7E08]
+	(No symbol) [0x002C8F2D]
+	GetHandleVerifier [0x00668E3A+2540266]
+	GetHandleVerifier [0x006A8959+2801161]
+	GetHandleVerifier [0x006A295C+2776588]
+	GetHandleVerifier [0x00492280+612144]
+	(No symbol) [0x003A4F6C]
+	(No symbol) [0x003A11D8]
+	(No symbol) [0x003A12BB]
+	(No symbol) [0x00394857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<status status="FAIL" starttime="20230519 06:24:12.027" endtime="20230519 16:26:58.489"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230519 16:26:58.489" endtime="20230519 16:26:58.489"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20230519 16:26:58.489" endtime="20230519 16:26:58.489"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230519 16:26:58.489" endtime="20230519 16:26:58.489"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230519 16:26:58.489" endtime="20230519 16:26:58.489"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230519 16:26:58.489" endtime="20230519 16:26:58.489"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:26:58.489" endtime="20230519 16:26:58.489"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:24:12.027" endtime="20230519 16:26:58.489"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:00.491" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:26:58.489" endtime="20230519 16:27:00.491"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:00.491" endtime="20230519 16:27:00.491"/>
+</kw>
+<status status="PASS" starttime="20230519 16:26:58.489" endtime="20230519 16:27:00.491"/>
+</kw>
+<status status="FAIL" starttime="20230519 06:24:12.027" endtime="20230519 16:27:00.491">Setup failed:
+WebDriverException: Message: unknown error: DevToolsActivePort file doesn't exist
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00408893+48451]
+	(No symbol) [0x0039B8A1]
+	(No symbol) [0x002A5058]
+	(No symbol) [0x002C5304]
+	(No symbol) [0x002C1951]
+	(No symbol) [0x002C0019]
+	(No symbol) [0x002F0798]
+	(No symbol) [0x002F047C]
+	(No symbol) [0x002EA0B6]
+	(No symbol) [0x002C7E08]
+	(No symbol) [0x002C8F2D]
+	GetHandleVerifier [0x00668E3A+2540266]
+	GetHandleVerifier [0x006A8959+2801161]
+	GetHandleVerifier [0x006A295C+2776588]
+	GetHandleVerifier [0x00492280+612144]
+	(No symbol) [0x003A4F6C]
+	(No symbol) [0x003A11D8]
+	(No symbol) [0x003A12BB]
+	(No symbol) [0x00394857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</status>
+</test>
+<doc>Test Case Login</doc>
+<status status="FAIL" starttime="20230519 06:23:44.345" endtime="20230519 16:27:00.491"/>
+</suite>
+<suite id="s1-s2-s3" name="LoginTC1" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\LoginTC1.robot">
+<test id="s1-s2-s3-t1" name="Test Login" line="13">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:27:04.902" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x040690E8&gt;</msg>
+<status status="PASS" starttime="20230519 16:27:04.902" endtime="20230519 16:27:04.902"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:27:04.902" endtime="20230519 16:27:04.902"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:27:04.902" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:27:04.902" endtime="20230519 16:27:07.337"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:27:07.337" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:27:07.337" endtime="20230519 16:27:09.418"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:27:09.418" level="INFO">${handles} = ['8ED33695C2AC0DB8008F824ECA297C08']</msg>
+<status status="PASS" starttime="20230519 16:27:09.418" endtime="20230519 16:27:09.418"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 16:27:09.418" endtime="20230519 16:27:09.662"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 16:27:09.911" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 16:27:09.668" endtime="20230519 16:27:09.911"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:27:09.911" endtime="20230519 16:27:09.911"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:09.662" endtime="20230519 16:27:09.911"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 16:27:09.911" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 16:27:09.911" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 16:27:09.911" endtime="20230519 16:27:09.911"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 16:27:09.911" endtime="20230519 16:27:09.911"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:09.911" endtime="20230519 16:27:09.911"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:27:09.911" endtime="20230519 16:27:09.911"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:04.902" endtime="20230519 16:27:09.911"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:11.913" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:09.911" endtime="20230519 16:27:11.913"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:11.913" endtime="20230519 16:27:18.211"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:09.911" endtime="20230519 16:27:18.211"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:04.886" endtime="20230519 16:27:18.211">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<doc>Test Case Login</doc>
+<status status="FAIL" starttime="20230519 16:27:00.507" endtime="20230519 16:27:18.211"/>
+</suite>
+<suite id="s1-s2-s4" name="LoginTC2" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\LoginTC2.robot">
+<test id="s1-s2-s4-t1" name="Test Deleteuser" line="12">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 16:27:18.226" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 16:27:18.226" endtime="20230519 16:27:18.226"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:20.227" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:18.226" endtime="20230519 16:27:20.227"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:20.227" endtime="20230519 16:27:20.227"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:18.226" endtime="20230519 16:27:20.227"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:18.226" endtime="20230519 16:27:20.227">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<doc>Test Case Login</doc>
+<status status="FAIL" starttime="20230519 16:27:18.211" endtime="20230519 16:27:20.227"/>
+</suite>
+<suite id="s1-s2-s5" name="RegisterTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\RegisterTC.robot">
+<test id="s1-s2-s5-t1" name="TC1" line="13">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 16:27:20.273" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 16:27:20.273" endtime="20230519 16:27:20.273"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:22.274" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:20.273" endtime="20230519 16:27:22.274"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:22.274" endtime="20230519 16:27:22.274"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:20.273" endtime="20230519 16:27:22.274"/>
+</kw>
+<doc>Register a New User with the email ID.</doc>
+<status status="FAIL" starttime="20230519 16:27:20.258" endtime="20230519 16:27:22.274">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<test id="s1-s2-s5-t2" name="TC2" line="33">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 16:27:22.274" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 16:27:22.274" endtime="20230519 16:27:22.274"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:24.289" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:22.274" endtime="20230519 16:27:24.289"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:24.289" endtime="20230519 16:27:24.289"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:22.274" endtime="20230519 16:27:24.289"/>
+</kw>
+<doc>Register a Existing User with the email ID.</doc>
+<status status="FAIL" starttime="20230519 16:27:22.274" endtime="20230519 16:27:24.289">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<status status="FAIL" starttime="20230519 16:27:20.227" endtime="20230519 16:27:24.289"/>
+</suite>
+<suite id="s1-s2-s6" name="SearchTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot">
+<test id="s1-s2-s6-t1" name="Check Item is found by Search button." line="10">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 16:27:24.320" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 16:27:24.320" endtime="20230519 16:27:24.320"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:26.323" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:24.320" endtime="20230519 16:27:26.323"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:26.323" endtime="20230519 16:27:26.323"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:24.320" endtime="20230519 16:27:26.323"/>
+</kw>
+<doc>Check links opening in other tab when click "Add New Category" button.</doc>
+<status status="FAIL" starttime="20230519 16:27:24.304" endtime="20230519 16:27:26.323">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<test id="s1-s2-s6-t2" name="Check Item is Not found by Search button." line="18">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 16:27:26.338" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 16:27:26.338" endtime="20230519 16:27:26.338"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:28.338" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:26.338" endtime="20230519 16:27:28.338"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:28.338" endtime="20230519 16:27:28.338"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:26.338" endtime="20230519 16:27:28.338"/>
+</kw>
+<doc>Check links opening in other tab when click "Add New Category" button.</doc>
+<status status="FAIL" starttime="20230519 16:27:26.323" endtime="20230519 16:27:28.338">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<test id="s1-s2-s6-t3" name="User searches without any product." line="25">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 16:27:28.354" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 16:27:28.354" endtime="20230519 16:27:28.354"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:30.355" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:28.354" endtime="20230519 16:27:30.355"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:30.355" endtime="20230519 16:27:30.355"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:28.354" endtime="20230519 16:27:30.355"/>
+</kw>
+<doc>Check links opening in other tab when click "Add New Category" button.</doc>
+<status status="FAIL" starttime="20230519 16:27:28.338" endtime="20230519 16:27:30.355">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<status status="FAIL" starttime="20230519 16:27:24.289" endtime="20230519 16:27:30.355"/>
+</suite>
+<suite id="s1-s2-s7" name="TestTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\TestTC.robot">
+<test id="s1-s2-s7-t1" name="Click the Test cases link." line="10">
+<kw name="common.Open My Browser" type="SETUP">
+<msg timestamp="20230519 16:27:30.370" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" starttime="20230519 16:27:30.370" endtime="20230519 16:27:30.370"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:32.370" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:30.370" endtime="20230519 16:27:32.370"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:32.370" endtime="20230519 16:27:32.370"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:30.370" endtime="20230519 16:27:32.370"/>
+</kw>
+<doc>Check links opening in other tab when click "Add New Category" button.</doc>
+<status status="FAIL" starttime="20230519 16:27:30.370" endtime="20230519 16:27:32.370">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<status status="FAIL" starttime="20230519 16:27:30.355" endtime="20230519 16:27:32.370"/>
+</suite>
+<status status="FAIL" starttime="20230519 06:23:42.266" endtime="20230519 16:27:32.370"/>
+</suite>
+<suite id="s1-s3" name="Workspaces" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Workspaces">
+<suite id="s1-s3-s1" name="WorkspaceTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Workspaces\WorkspaceTC.robot">
+<test id="s1-s3-s1-t1" name="01 Create workspace" line="11">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:27:32.417" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x040698C8&gt;</msg>
+<status status="PASS" starttime="20230519 16:27:32.417" endtime="20230519 16:27:32.417"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:27:32.417" endtime="20230519 16:27:32.417"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:27:32.433" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:27:32.417" endtime="20230519 16:27:34.006"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:27:34.006" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:27:34.006" endtime="20230519 16:27:36.128"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:27:36.135" level="INFO">${handles} = ['5611963DECB94F4393D56190B4216702']</msg>
+<status status="PASS" starttime="20230519 16:27:36.128" endtime="20230519 16:27:36.135"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 16:27:36.135" endtime="20230519 16:27:36.356"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 16:27:36.568" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 16:27:36.356" endtime="20230519 16:27:36.568"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:27:36.568" endtime="20230519 16:27:36.568"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:36.356" endtime="20230519 16:27:36.568"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 16:27:36.568" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 16:27:36.568" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 16:27:36.568" endtime="20230519 16:27:36.568"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 16:27:36.568" endtime="20230519 16:27:36.568"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:36.568" endtime="20230519 16:27:36.568"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:27:36.583" endtime="20230519 16:27:36.583"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:32.417" endtime="20230519 16:27:36.583"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:38.594" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:36.583" endtime="20230519 16:27:38.594"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:38.594" endtime="20230519 16:27:44.798"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:36.583" endtime="20230519 16:27:44.798"/>
+</kw>
+<tag>Sdanity</tag>
+<status status="FAIL" starttime="20230519 16:27:32.417" endtime="20230519 16:27:44.798">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<test id="s1-s3-s1-t2" name="02 Rename workspace" line="21">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:27:44.798" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00CF4CB8&gt;</msg>
+<status status="PASS" starttime="20230519 16:27:44.798" endtime="20230519 16:27:44.798"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:27:44.798" endtime="20230519 16:27:44.798"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:27:44.798" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:27:44.798" endtime="20230519 16:27:46.351"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:27:46.351" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:27:46.351" endtime="20230519 16:27:48.382"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:27:48.390" level="INFO">${handles} = ['DA585B4652E7D2D0F0C0BFCB10065BCE']</msg>
+<status status="PASS" starttime="20230519 16:27:48.382" endtime="20230519 16:27:48.390"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 16:27:48.390" endtime="20230519 16:27:48.422"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 16:27:48.430" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<msg timestamp="20230519 16:27:48.444" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<status status="FAIL" starttime="20230519 16:27:48.422" endtime="20230519 16:27:48.444"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230519 16:27:48.444" endtime="20230519 16:27:48.444"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:48.422" endtime="20230519 16:27:48.444"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230519 16:27:48.444" endtime="20230519 16:27:48.444"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:27:48.444" endtime="20230519 16:27:48.444"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:44.798" endtime="20230519 16:27:48.444"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:27:50.445" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:27:48.444" endtime="20230519 16:27:50.445"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:27:50.445" endtime="20230519 16:27:52.492"/>
+</kw>
+<status status="PASS" starttime="20230519 16:27:48.444" endtime="20230519 16:27:52.492"/>
+</kw>
+<tag>Rename</tag>
+<status status="FAIL" starttime="20230519 16:27:44.798" endtime="20230519 16:27:52.492">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</status>
+</test>
+<test id="s1-s3-s1-t3" name="03 Delete Workspace" line="31">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:27:52.492" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0412C1F0&gt;</msg>
+<status status="PASS" starttime="20230519 16:27:52.492" endtime="20230519 16:27:52.492"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:27:52.492" endtime="20230519 16:27:52.492"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:27:52.492" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:27:52.492" endtime="20230519 16:27:58.496"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:27:58.496" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<msg timestamp="20230519 16:28:10.866" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04069478&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc/screenshot</msg>
+<msg timestamp="20230519 16:28:14.945" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04069BC8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc/screenshot</msg>
+<msg timestamp="20230519 16:28:19.033" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04069A90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc/screenshot</msg>
+<msg timestamp="20230519 16:28:23.128" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=61429): Max retries exceeded with url: /session/b5595c804b1ae1105a8a8b062df944fc/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x040693E8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<msg timestamp="20230519 16:28:23.128" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
+<status status="FAIL" starttime="20230519 16:27:58.496" endtime="20230519 16:28:23.643"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20230519 16:28:23.643" endtime="20230519 16:28:23.643"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230519 16:28:23.643" endtime="20230519 16:28:23.643"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230519 16:28:23.643" endtime="20230519 16:28:23.643"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230519 16:28:23.643" endtime="20230519 16:28:23.643"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:28:23.643" endtime="20230519 16:28:23.643"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:27:52.492" endtime="20230519 16:28:23.643"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:28:25.663" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:28:23.643" endtime="20230519 16:28:25.664"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20230519 16:28:29.737" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00CF4A00&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc</msg>
+<msg timestamp="20230519 16:28:33.818" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00CF4AD8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc</msg>
+<msg timestamp="20230519 16:28:37.909" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00CF4D48&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc</msg>
+<status status="PASS" starttime="20230519 16:28:25.664" endtime="20230519 16:28:46.070"/>
+</kw>
+<status status="PASS" starttime="20230519 16:28:23.643" endtime="20230519 16:28:46.070"/>
+</kw>
+<tag>Delete</tag>
+<status status="FAIL" starttime="20230519 16:27:52.492" endtime="20230519 16:28:46.071">Setup failed:
+ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
+</test>
+<test id="s1-s3-s1-t4" name="04. Total number of Existing Projects" line="41">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:28:46.077" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00CF49E8&gt;</msg>
+<status status="PASS" starttime="20230519 16:28:46.077" endtime="20230519 16:28:46.077"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:28:46.077" endtime="20230519 16:28:46.077"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:28:46.086" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:28:46.085" endtime="20230519 16:28:47.888"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:28:47.890" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:28:47.889" endtime="20230519 16:28:50.389"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:28:50.397" level="INFO">${handles} = ['5E9BC289E38F3B85CF08D25392C0768D']</msg>
+<status status="PASS" starttime="20230519 16:28:50.389" endtime="20230519 16:28:50.397"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 16:28:50.398" endtime="20230519 16:28:50.738"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 16:28:51.046" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 16:28:50.739" endtime="20230519 16:28:51.046"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:28:51.047" endtime="20230519 16:28:51.048"/>
+</kw>
+<status status="PASS" starttime="20230519 16:28:50.738" endtime="20230519 16:28:51.048"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 16:28:51.050" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 16:28:51.050" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 16:28:51.049" endtime="20230519 16:28:51.050"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 16:28:51.050" endtime="20230519 16:28:51.050"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:28:51.049" endtime="20230519 16:28:51.051"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:28:51.051" endtime="20230519 16:28:51.051"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:28:46.077" endtime="20230519 16:28:51.052"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:28:53.069" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:28:51.057" endtime="20230519 16:28:53.069"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:28:53.069" endtime="20230519 16:28:59.471"/>
+</kw>
+<status status="PASS" starttime="20230519 16:28:51.056" endtime="20230519 16:28:59.472"/>
+</kw>
+<tag>Exist</tag>
+<status status="FAIL" starttime="20230519 16:28:46.076" endtime="20230519 16:28:59.474">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<test id="s1-s3-s1-t5" name="05 Start a new project" line="56">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:28:59.480" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04114940&gt;</msg>
+<status status="PASS" starttime="20230519 16:28:59.480" endtime="20230519 16:28:59.480"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:28:59.480" endtime="20230519 16:28:59.490"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:28:59.491" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:28:59.490" endtime="20230519 16:29:01.378"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:29:01.379" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<msg timestamp="20230519 16:29:03.538" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CB7BB6]
+	(No symbol) [0x00CB78D9]
+	(No symbol) [0x00CC6460]
+	(No symbol) [0x00D1C038]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<msg timestamp="20230519 16:29:03.553" level="FAIL">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC4F20]
+	(No symbol) [0x00CB8097]
+	(No symbol) [0x00CB6D46]
+	(No symbol) [0x00CB75CA]
+	(No symbol) [0x00CC0135]
+	(No symbol) [0x00CCC2B8]
+	(No symbol) [0x00CCF1B6]
+	(No symbol) [0x00CB79E3]
+	(No symbol) [0x00CCBFCA]
+	(No symbol) [0x00D1C67F]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<status status="FAIL" starttime="20230519 16:29:01.379" endtime="20230519 16:29:03.554"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:03.554" endtime="20230519 16:29:03.554"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:03.554" endtime="20230519 16:29:03.554"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230519 16:29:03.554" endtime="20230519 16:29:03.554"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:03.554" endtime="20230519 16:29:03.554"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:03.554" endtime="20230519 16:29:03.554"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:28:59.480" endtime="20230519 16:29:03.554"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:29:05.562" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:29:03.559" endtime="20230519 16:29:05.562"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:29:05.564" endtime="20230519 16:29:07.682"/>
+</kw>
+<status status="PASS" starttime="20230519 16:29:03.558" endtime="20230519 16:29:07.682"/>
+</kw>
+<tag>Sanity</tag>
+<status status="FAIL" starttime="20230519 16:28:59.480" endtime="20230519 16:29:07.683">Setup failed:
+WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC4F20]
+	(No symbol) [0x00CB8097]
+	(No symbol) [0x00CB6D46]
+	(No symbol) [0x00CB75CA]
+	(No symbol) [0x00CC0135]
+	(No symbol) [0x00CCC2B8]
+	(No symbol) [0x00CCF1B6]
+	(No symbol) [0x00CB79E3]
+	(No symbol) [0x00CCBFCA]
+	(No symbol) [0x00D1C67F]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</status>
+</test>
+<test id="s1-s3-s1-t6" name="06 Search for an Existing project" line="66">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:29:11.751" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x03F89520&gt;</msg>
+<status status="PASS" starttime="20230519 16:29:07.690" endtime="20230519 16:29:11.751"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:29:11.751" endtime="20230519 16:29:11.751"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:29:11.754" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:29:11.753" endtime="20230519 16:29:13.498"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:29:13.499" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:29:13.499" endtime="20230519 16:29:15.976"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:29:15.980" level="INFO">${handles} = ['A0842661C5D0BFDC1806343FE2FE489A']</msg>
+<status status="PASS" starttime="20230519 16:29:15.976" endtime="20230519 16:29:15.980"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 16:29:15.980" endtime="20230519 16:29:16.307"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 16:29:16.598" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 16:29:16.308" endtime="20230519 16:29:16.598"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:29:16.598" endtime="20230519 16:29:16.598"/>
+</kw>
+<status status="PASS" starttime="20230519 16:29:16.307" endtime="20230519 16:29:16.604"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 16:29:16.606" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 16:29:16.606" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 16:29:16.605" endtime="20230519 16:29:16.606"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:16.607" endtime="20230519 16:29:16.607"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:29:16.604" endtime="20230519 16:29:16.608"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:16.608" endtime="20230519 16:29:16.609"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:29:07.688" endtime="20230519 16:29:16.609"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:29:18.626" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:29:16.610" endtime="20230519 16:29:18.626"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:29:18.627" endtime="20230519 16:29:25.153"/>
+</kw>
+<status status="PASS" starttime="20230519 16:29:16.610" endtime="20230519 16:29:25.154"/>
+</kw>
+<tag>Sanity1</tag>
+<status status="FAIL" starttime="20230519 16:29:07.688" endtime="20230519 16:29:25.155">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<test id="s1-s3-s1-t7" name="07 Search for an Non-Existing project" line="76">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:29:25.161" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00CF4A00&gt;</msg>
+<status status="PASS" starttime="20230519 16:29:25.161" endtime="20230519 16:29:25.161"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:29:25.161" endtime="20230519 16:29:25.161"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:29:25.168" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:29:25.167" endtime="20230519 16:29:26.905"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:29:26.906" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:29:26.905" endtime="20230519 16:29:29.405"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:29:29.416" level="INFO">${handles} = ['9520471D9587D9C2BC3DD5DD3009DDA6']</msg>
+<status status="PASS" starttime="20230519 16:29:29.406" endtime="20230519 16:29:29.416"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230519 16:29:29.416" endtime="20230519 16:29:29.763"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${curURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230519 16:29:30.139" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230519 16:29:29.764" endtime="20230519 16:29:30.139"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${curURL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:29:30.139" endtime="20230519 16:29:30.141"/>
+</kw>
+<status status="PASS" starttime="20230519 16:29:29.763" endtime="20230519 16:29:30.142"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${JSONContent}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230519 16:29:30.144" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\TestData\Involve_Test.json"&gt;C:\Users\User\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230519 16:29:30.144" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</msg>
+<status status="FAIL" starttime="20230519 16:29:30.143" endtime="20230519 16:29:30.144"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${page}</var>
+<arg>json.loads("""${JSONContent}""")</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:30.144" endtime="20230519 16:29:30.145"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:29:30.142" endtime="20230519 16:29:30.145"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:30.145" endtime="20230519 16:29:30.145"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:29:25.161" endtime="20230519 16:29:30.146"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:29:32.149" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:29:30.146" endtime="20230519 16:29:32.149"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:29:32.149" endtime="20230519 16:29:39.068"/>
+</kw>
+<status status="PASS" starttime="20230519 16:29:30.146" endtime="20230519 16:29:39.069"/>
+</kw>
+<tag>SanityN</tag>
+<status status="FAIL" starttime="20230519 16:29:25.160" endtime="20230519 16:29:39.069">Setup failed:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\TestData\\Involve_Test.json'</status>
+</test>
+<test id="s1-s3-s1-t8" name="08 Cancel project deletion" line="86">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:29:39.073" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0412C040&gt;</msg>
+<status status="PASS" starttime="20230519 16:29:39.073" endtime="20230519 16:29:39.073"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:29:39.073" endtime="20230519 16:29:39.073"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:29:39.082" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:29:39.081" endtime="20230519 16:29:40.926"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:29:40.927" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:29:40.927" endtime="20230519 16:29:43.721"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:29:43.738" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<msg timestamp="20230519 16:29:43.756" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CB6F0B]
+	(No symbol) [0x00CB75CA]
+	(No symbol) [0x00CB7568]
+	(No symbol) [0x00CAC0BA]
+	(No symbol) [0x00CAC917]
+	(No symbol) [0x00D12AB7]
+	(No symbol) [0x00D0A283]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<status status="FAIL" starttime="20230519 16:29:43.721" endtime="20230519 16:29:43.961"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:43.961" endtime="20230519 16:29:43.961"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230519 16:29:43.961" endtime="20230519 16:29:43.961"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:43.961" endtime="20230519 16:29:43.961"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:43.961" endtime="20230519 16:29:43.961"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:29:39.073" endtime="20230519 16:29:43.961"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:29:45.979" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:29:43.969" endtime="20230519 16:29:45.979"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:29:45.979" endtime="20230519 16:29:48.111"/>
+</kw>
+<status status="PASS" starttime="20230519 16:29:43.961" endtime="20230519 16:29:48.112"/>
+</kw>
+<tag>SanityC</tag>
+<status status="FAIL" starttime="20230519 16:29:39.073" endtime="20230519 16:29:48.112">Setup failed:
+WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CB6F0B]
+	(No symbol) [0x00CB75CA]
+	(No symbol) [0x00CB7568]
+	(No symbol) [0x00CAC0BA]
+	(No symbol) [0x00CAC917]
+	(No symbol) [0x00D12AB7]
+	(No symbol) [0x00D0A283]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</status>
+</test>
+<test id="s1-s3-s1-t9" name="09 project deletion" line="96">
+<kw name="Start" library="common" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230519 16:29:48.121" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04096CA0&gt;</msg>
+<status status="PASS" starttime="20230519 16:29:48.121" endtime="20230519 16:29:48.121"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230519 16:29:48.121" endtime="20230519 16:29:48.121"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230519 16:29:48.128" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230519 16:29:48.127" endtime="20230519 16:29:49.834"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230519 16:29:49.835" level="INFO">Opening url 'https://www.involve.me/'</msg>
+<status status="PASS" starttime="20230519 16:29:49.834" endtime="20230519 16:29:52.206"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230519 16:29:52.225" level="INFO">${handles} = []</msg>
+<status status="PASS" starttime="20230519 16:29:52.206" endtime="20230519 16:29:52.226"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20230519 16:29:52.256" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<msg timestamp="20230519 16:29:52.291" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<status status="FAIL" starttime="20230519 16:29:52.227" endtime="20230519 16:29:52.292"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230519 16:29:52.293" endtime="20230519 16:29:52.293"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>../../TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:52.293" endtime="20230519 16:29:52.293"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230519 16:29:52.293" endtime="20230519 16:29:52.294"/>
+</kw>
+<status status="FAIL" starttime="20230519 16:29:48.121" endtime="20230519 16:29:52.294"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230519 16:29:58.729" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230519 16:29:52.297" endtime="20230519 16:29:58.730"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230519 16:29:58.730" endtime="20230519 16:30:04.916"/>
+</kw>
+<status status="PASS" starttime="20230519 16:29:52.295" endtime="20230519 16:30:04.916"/>
+</kw>
+<tag>SanityD</tag>
+<status status="FAIL" starttime="20230519 16:29:48.120" endtime="20230519 16:30:04.916">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</status>
+</test>
+<doc>Workspace</doc>
+<status status="FAIL" starttime="20230519 16:27:32.386" endtime="20230519 16:30:04.921"/>
+</suite>
+<status status="FAIL" starttime="20230519 16:27:32.370" endtime="20230519 16:30:04.930"/>
+</suite>
+<status status="FAIL" starttime="20230519 06:23:15.019" endtime="20230519 16:30:04.936"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="23" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Delete</stat>
+<stat pass="0" fail="1" skip="0">Exist</stat>
+<stat pass="0" fail="1" skip="0">Rename</stat>
+<stat pass="0" fail="1" skip="0">Sanity</stat>
+<stat pass="0" fail="1" skip="0">Sanity1</stat>
+<stat pass="0" fail="1" skip="0">SanityC</stat>
+<stat pass="0" fail="1" skip="0">SanityD</stat>
+<stat pass="0" fail="1" skip="0">SanityN</stat>
+<stat pass="0" fail="1" skip="0">Sdanity</stat>
+</tag>
+<suite>
+<stat pass="0" fail="23" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="ForgotPassword">TestCases.ForgotPassword</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1" name="ForgotPassword">TestCases.ForgotPassword.ForgotPassword</stat>
+<stat pass="0" fail="12" skip="0" id="s1-s2" name="Login">TestCases.Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2-s1" name="ContactTC">TestCases.Login.ContactTC</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s2-s2" name="LoginTC">TestCases.Login.LoginTC</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2-s3" name="LoginTC1">TestCases.Login.LoginTC1</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2-s4" name="LoginTC2">TestCases.Login.LoginTC2</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2-s5" name="RegisterTC">TestCases.Login.RegisterTC</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s2-s6" name="SearchTC">TestCases.Login.SearchTC</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2-s7" name="TestTC">TestCases.Login.TestTC</stat>
+<stat pass="0" fail="9" skip="0" id="s1-s3" name="Workspaces">TestCases.Workspaces</stat>
+<stat pass="0" fail="9" skip="0" id="s1-s3-s1" name="WorkspaceTC">TestCases.Workspaces.WorkspaceTC</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230519 06:23:42.298" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\ContactTC.robot' on line 4: Resource file '..\..\PageObjects\ContactUS\ContactKW.robot' does not exist.</msg>
+<msg timestamp="20230519 16:27:24.289" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot' on line 3: Resource file '..\..\PageObjects\Search\SearchKW.robot' does not exist.</msg>
+<msg timestamp="20230519 16:27:30.370" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\TestTC.robot' on line 4: Resource file '..\..\PageObjects\ContactUS\ContactKW.robot' does not exist.</msg>
+<msg timestamp="20230519 16:27:48.430" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<msg timestamp="20230519 16:28:10.866" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04069478&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc/screenshot</msg>
+<msg timestamp="20230519 16:28:14.945" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04069BC8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc/screenshot</msg>
+<msg timestamp="20230519 16:28:19.033" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x04069A90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc/screenshot</msg>
+<msg timestamp="20230519 16:28:23.128" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=61429): Max retries exceeded with url: /session/b5595c804b1ae1105a8a8b062df944fc/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x040693E8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<msg timestamp="20230519 16:28:29.737" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00CF4A00&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc</msg>
+<msg timestamp="20230519 16:28:33.818" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00CF4AD8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc</msg>
+<msg timestamp="20230519 16:28:37.909" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00CF4D48&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b5595c804b1ae1105a8a8b062df944fc</msg>
+<msg timestamp="20230519 16:29:03.538" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CB7BB6]
+	(No symbol) [0x00CB78D9]
+	(No symbol) [0x00CC6460]
+	(No symbol) [0x00D1C038]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<msg timestamp="20230519 16:29:43.738" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+<msg timestamp="20230519 16:29:52.256" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E28893+48451]
+	(No symbol) [0x00DBB8A1]
+	(No symbol) [0x00CC5058]
+	(No symbol) [0x00CAD073]
+	(No symbol) [0x00D0DEBB]
+	(No symbol) [0x00D1BFD3]
+	(No symbol) [0x00D0A0B6]
+	(No symbol) [0x00CE7E08]
+	(No symbol) [0x00CE8F2D]
+	GetHandleVerifier [0x01088E3A+2540266]
+	GetHandleVerifier [0x010C8959+2801161]
+	GetHandleVerifier [0x010C295C+2776588]
+	GetHandleVerifier [0x00EB2280+612144]
+	(No symbol) [0x00DC4F6C]
+	(No symbol) [0x00DC11D8]
+	(No symbol) [0x00DC12BB]
+	(No symbol) [0x00DB4857]
+	BaseThreadInitThunk [0x77150099+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297B3E+238]
+</msg>
+</errors>
+</robot>
