@@ -1,0 +1,24 @@
+1685652700903	geckodriver	INFO	Listening on 127.0.0.1:64523
+1685652703951	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64524" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileNIJYX7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1685652704567	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1685652704585	Marionette	INFO	Listening on port 64531
+Read port: 64531
+WebDriver BiDi listening on ws://127.0.0.1:64524
+1685652704911	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: Failed to initialize GPU process
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\WINDOWS\\TEMP\\rust_mozprofileNIJYX7\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64524/devtools/browser/77972993-6824-4ad0-9fda-031c89211243
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+JavaScript error: https://involveme.involve.me/nps-survey-in-app?embed=1&embedmode=popup&noresize=1&loadcolor=%23F2F4F4FF&src=https%3A%2F%2Fapp.involve.me%2Fprojects&remote_id=6dc82441-1c9c-4401-884e-1d8232850580&plan_label=free:subscription:owner&days_registered=35&days_on_plan=undefined, line 1: ReferenceError: startCheckingOnlineStatus is not defined
+JavaScript error: https://sibautomation.com/sa.js?key=2p481wp307h2xx303bxqm, line 27: TypeError: document.body is null
+1685652734114	Marionette	INFO	Stopped listening on port 64531
+Dynamically enable window occlusion 1
