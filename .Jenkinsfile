@@ -11,8 +11,7 @@ timeout(time: 5, unit: 'MINUTES') {
            }
 
            stage('robot'){
-   sh 'robot allure_robotframework --outputdir ./output/robot -i Create -v browser:firefox WorkspaceTC.robot
- || true'
+sh 'robot allure_robotframework --outputdir ./output/robot -i Create -v browser:firefox WorkspaceTC.robot'
            }
 
            /* disabled: false --> history ON */
