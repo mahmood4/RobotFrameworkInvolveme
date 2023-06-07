@@ -4,6 +4,7 @@
 *** Settings ***
 Documentation       Keyword Login page Ecommerces Anhtester
 Library             SeleniumLibrary
+Library             String
 Variables           WorkspaceUI.py
 Resource            ../common/common.robot
 
@@ -43,7 +44,7 @@ Rename workspace
     common.Click For Element     ${CONFIRMATION_BUTTON}
 #   common.Click For Element     ${WORKSPACE_EDIT_BUTTON}
 
-Delete workspace
+Delete Demoworkspace
    sleep    2s
    @{my_list}=    Get Webelements    WORKSPACE_LIST
    FOR    ${element}    IN    @{my_list}
@@ -55,6 +56,32 @@ Delete workspace
    log to console   ${text}
    common.Input For Text       ${DELETE_WORKSPACE_FIELD}      ${text}
    common.Click For Element     ${CONFIRMATION_BUTTON}
+
+
+Delete workspace
+   sleep    2s
+   [Arguments]                      ${WorkspaceName}
+   @{my_list}=    Get Webelements    ${WORKSPACE_LIST}
+   FOR    ${element}    IN    @{my_list}
+        ${text}=    Get Text    ${element}
+        ${str}=    Set Variable    ${text}
+        ${Id}=    split string     ${str}    \n
+        log to console     ${Id}[0]
+        IF  "${Id}[0]" == "${WorkspaceName}"
+             common.Click For Element    //*[text()='${Id}[0]']
+             log to console     "Workspace Selected"
+             wait until page contains element    ${RATING}
+             common.Click For Element       ${RATING}
+             sleep  2s
+             common.Click For Element     ${WORKSPACE_EDIT_BUTTON}
+             common.Click For Element     ${DELETE_WORKSPACE_BUTTON}
+             ${text}=   Get Element Attribute    ${DELETE_WORKSPACE_FIELD}   placeholder
+             log to console   ${text}
+             common.Input For Text       ${DELETE_WORKSPACE_FIELD}      ${text}
+             common.Click For Element     ${CONFIRMATION_BUTTON}
+             Exit For Loop
+        END
+   END
 
 Get workspacesw number
    @{my_list}=    Get Webelements    WORKSPACE_LIST

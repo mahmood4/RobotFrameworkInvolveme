@@ -28,6 +28,7 @@ Test Login N Logout
  #   Is Text Displayed     ${SCREEN_TEXTS["ws_page_title"]}
 
 Test Invalid Login
+    [Tags]  InvalidL
     sleep    1s
     Click Cookie
     Click On Link Login

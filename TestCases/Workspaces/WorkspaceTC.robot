@@ -26,7 +26,7 @@ Test Teardown      common.Close My Browser
 
     [Tags]  Delete
     Login to the Application
-    Delete workspace   #Another test
+    Delete workspace   test
 
 04. Total number of Existing Projects
     [Tags]  Exist

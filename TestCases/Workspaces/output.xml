@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20230601 23:16:51.342" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20230607 18:47:36.486" rpa="false" schemaversion="3">
 <suite id="s1" name="WorkspaceTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Workspaces\WorkspaceTC.robot">
-<test id="s1-t1" name="01 Create workspace" line="13">
+<test id="s1-t1" name="03 Delete Workspace" line="25">
 <kw name="Start" library="common" type="SETUP">
 <if>
 <branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
@@ -10,118 +10,118 @@
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20230601 23:16:52.031" endtime="20230601 23:16:52.031"/>
+<status status="NOT RUN" starttime="20230607 18:47:37.390" endtime="20230607 18:47:37.390"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${options}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230601 23:16:52.031" endtime="20230601 23:16:52.031"/>
+<status status="NOT RUN" starttime="20230607 18:47:37.390" endtime="20230607 18:47:37.390"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>chrome_options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="NOT RUN" starttime="20230601 23:16:52.031" endtime="20230601 23:16:52.031"/>
+<status status="NOT RUN" starttime="20230607 18:47:37.390" endtime="20230607 18:47:37.390"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" starttime="20230601 23:16:52.031" endtime="20230601 23:16:52.031"/>
+<status status="NOT RUN" starttime="20230607 18:47:37.390" endtime="20230607 18:47:37.390"/>
 </kw>
-<status status="NOT RUN" starttime="20230601 23:16:52.031" endtime="20230601 23:16:52.031"/>
+<status status="NOT RUN" starttime="20230607 18:47:37.389" endtime="20230607 18:47:37.390"/>
 </branch>
 <branch type="ELSE">
 <kw name="Disable Download Dialog" library="browser">
 <var>${driver_path}</var>
-<msg timestamp="20230601 23:16:52.031" level="INFO">
+<msg timestamp="20230607 18:47:37.390" level="INFO">
 </msg>
-<msg timestamp="20230601 23:16:52.031" level="INFO">====== WebDriver manager ======</msg>
-<msg timestamp="20230601 23:16:52.679" level="INFO">Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe] found in cache</msg>
-<msg timestamp="20230601 23:16:52.679" level="INFO">C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe</msg>
-<msg timestamp="20230601 23:16:52.680" level="INFO">====== WebDriver manager ======
-Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe] found in cache</msg>
-<msg timestamp="20230601 23:16:52.680" level="INFO">${driver_path} = C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe</msg>
-<status status="PASS" starttime="20230601 23:16:52.031" endtime="20230601 23:16:52.680"/>
+<msg timestamp="20230607 18:47:37.390" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20230607 18:47:37.702" level="INFO">Driver [C:\Users\User\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe] found in cache</msg>
+<msg timestamp="20230607 18:47:37.702" level="INFO">C:\Users\User\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe</msg>
+<msg timestamp="20230607 18:47:37.702" level="INFO">====== WebDriver manager ======
+Driver [C:\Users\User\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe] found in cache</msg>
+<msg timestamp="20230607 18:47:37.705" level="INFO">${driver_path} = C:\Users\User\.wdm\drivers\geckodriver\win64\v0.33.0\geckodriver.exe</msg>
+<status status="PASS" starttime="20230607 18:47:37.390" endtime="20230607 18:47:37.705"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>firefox</arg>
 <arg>executable_path=${driver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230601 23:16:52.684" level="INFO">Opening browser 'firefox' to base url 'https://www.involve.me/'.</msg>
-<msg timestamp="20230601 23:16:52.691" level="INFO">Firefox driver log is always forced to to: C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Workspaces\geckodriver-28.log</msg>
-<status status="PASS" starttime="20230601 23:16:52.682" endtime="20230601 23:17:03.487"/>
+<msg timestamp="20230607 18:47:37.706" level="INFO">Opening browser 'firefox' to base url 'https://www.involve.me/'.</msg>
+<msg timestamp="20230607 18:47:37.718" level="INFO">Firefox driver log is always forced to to: C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Workspaces\geckodriver-89.log</msg>
+<status status="PASS" starttime="20230607 18:47:37.705" endtime="20230607 18:47:48.089"/>
 </kw>
-<status status="PASS" starttime="20230601 23:16:52.031" endtime="20230601 23:17:03.489"/>
+<status status="PASS" starttime="20230607 18:47:37.390" endtime="20230607 18:47:48.089"/>
 </branch>
-<status status="PASS" starttime="20230601 23:16:52.031" endtime="20230601 23:17:03.489"/>
+<status status="PASS" starttime="20230607 18:47:37.389" endtime="20230607 18:47:48.089"/>
 </if>
 <kw name="Get Window Handles" library="SeleniumLibrary">
 <var>${handles}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<msg timestamp="20230601 23:17:03.495" level="INFO">${handles} = ['7af346bd-5bda-4002-bd3d-290b86498f19']</msg>
-<status status="PASS" starttime="20230601 23:17:03.489" endtime="20230601 23:17:03.495"/>
+<msg timestamp="20230607 18:47:48.094" level="INFO">${handles} = ['360c94ec-58a1-4e7f-9f33-d73a21f5083f']</msg>
+<status status="PASS" starttime="20230607 18:47:48.090" endtime="20230607 18:47:48.094"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230601 23:17:03.498" endtime="20230601 23:17:03.511"/>
+<status status="PASS" starttime="20230607 18:47:48.094" endtime="20230607 18:47:48.104"/>
 </kw>
 <kw name="Verify Current URL" library="common">
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${curURL}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230601 23:17:03.515" level="INFO">${curURL} = https://www.involve.me/</msg>
-<status status="PASS" starttime="20230601 23:17:03.512" endtime="20230601 23:17:03.516"/>
+<msg timestamp="20230607 18:47:48.108" level="INFO">${curURL} = https://www.involve.me/</msg>
+<status status="PASS" starttime="20230607 18:47:48.105" endtime="20230607 18:47:48.109"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${curURL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230601 23:17:03.518" endtime="20230601 23:17:03.518"/>
+<status status="PASS" starttime="20230607 18:47:48.109" endtime="20230607 18:47:48.110"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:03.512" endtime="20230601 23:17:03.519"/>
+<status status="PASS" starttime="20230607 18:47:48.104" endtime="20230607 18:47:48.111"/>
 </kw>
 <kw name="Read Json" library="common">
 <var>${SCREEN_TEXTS}</var>
-<arg>../../TestData/Involve_Test.json</arg>
+<arg>C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json</arg>
 <doc>The function, with its' own keyword reads the json files.</doc>
 <kw name="Get File" library="OperatingSystem">
 <var>${JSONContent}</var>
 <arg>${file_path}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20230601 23:17:03.521" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json"&gt;C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
-<msg timestamp="20230601 23:17:03.523" level="INFO">${JSONContent} = {
+<msg timestamp="20230607 18:47:48.113" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json"&gt;C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestData\Involve_Test.json&lt;/a&gt;'.</msg>
+<msg timestamp="20230607 18:47:48.114" level="INFO">${JSONContent} = {
     "name": "test",
     "new_name": "another test",
     "project_type": "score-based outcomes",
     "template_type": "Start from scratch",
     "project_name": "test project",
     "final_slide": "Tha...</msg>
-<status status="PASS" starttime="20230601 23:17:03.520" endtime="20230601 23:17:03.523"/>
+<status status="PASS" starttime="20230607 18:47:48.112" endtime="20230607 18:47:48.114"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${page}</var>
 <arg>json.loads("""${JSONContent}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230601 23:17:03.526" level="INFO">${page} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
-<status status="PASS" starttime="20230601 23:17:03.525" endtime="20230601 23:17:03.526"/>
+<msg timestamp="20230607 18:47:48.115" level="INFO">${page} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230607 18:47:48.114" endtime="20230607 18:47:48.115"/>
 </kw>
-<msg timestamp="20230601 23:17:03.529" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
-<status status="PASS" starttime="20230601 23:17:03.519" endtime="20230601 23:17:03.529"/>
+<msg timestamp="20230607 18:47:48.116" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230607 18:47:48.111" endtime="20230607 18:47:48.116"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${SCREEN_TEXTS}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20230601 23:17:03.532" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
-<status status="PASS" starttime="20230601 23:17:03.531" endtime="20230601 23:17:03.532"/>
+<msg timestamp="20230607 18:47:48.118" level="INFO">${SCREEN_TEXTS} = {'name': 'test', 'new_name': 'another test', 'project_type': 'score-based outcomes', 'template_type': 'Start from scratch', 'project_name': 'test project', 'final_slide': 'Thank You page', 'no_project...</msg>
+<status status="PASS" starttime="20230607 18:47:48.117" endtime="20230607 18:47:48.119"/>
 </kw>
-<status status="PASS" starttime="20230601 23:16:52.031" endtime="20230601 23:17:03.535"/>
+<status status="PASS" starttime="20230607 18:47:37.389" endtime="20230607 18:47:48.119"/>
 </kw>
 <kw name="Login to the Application" library="common">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${CLICK_COOKIE}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230601 23:17:03.536" endtime="20230601 23:17:03.619"/>
+<status status="PASS" starttime="20230607 18:47:48.122" endtime="20230607 18:47:48.427"/>
 </kw>
 <kw name="Click Cookie" library="LoginKW">
 <kw name="Click For Element" library="common">
@@ -130,29 +130,29 @@ Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:03.628" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="668962c7-5e66-499e-9463-0fb4589afdc0")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:03.622" endtime="20230601 23:17:03.629"/>
+<msg timestamp="20230607 18:47:48.471" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="78ab8a11-62c7-45d6-827d-fff2c8e6d56d")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:48.430" endtime="20230607 18:47:48.472"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:03.977" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="668962c7-5e66-499e-9463-0fb4589afdc0")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:03.631" endtime="20230601 23:17:03.978"/>
+<msg timestamp="20230607 18:47:48.837" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="78ab8a11-62c7-45d6-827d-fff2c8e6d56d")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:48.472" endtime="20230607 18:47:48.837"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:03.980" endtime="20230601 23:17:04.019"/>
+<status status="PASS" starttime="20230607 18:47:48.838" endtime="20230607 18:47:48.871"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:04.022" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="668962c7-5e66-499e-9463-0fb4589afdc0")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:04.020" endtime="20230601 23:17:04.348"/>
+<msg timestamp="20230607 18:47:48.873" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="78ab8a11-62c7-45d6-827d-fff2c8e6d56d")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:47:48.872" endtime="20230607 18:47:49.214"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:03.621" endtime="20230601 23:17:04.350"/>
+<status status="PASS" starttime="20230607 18:47:48.429" endtime="20230607 18:47:49.214"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:03.620" endtime="20230601 23:17:04.351"/>
+<status status="PASS" starttime="20230607 18:47:48.428" endtime="20230607 18:47:49.215"/>
 </kw>
 <kw name="Click On Link Login" library="LoginKW">
 <kw name="Click For Element" library="common">
@@ -161,29 +161,29 @@ Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:04.375" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="3cbcfaec-a534-45ab-87bd-fbbadefe5cbe")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:04.354" endtime="20230601 23:17:04.376"/>
+<msg timestamp="20230607 18:47:49.223" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="2770727d-677c-4f8c-be38-6a1dda7c64ba")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:49.215" endtime="20230607 18:47:49.223"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:04.797" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="3cbcfaec-a534-45ab-87bd-fbbadefe5cbe")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:04.378" endtime="20230601 23:17:04.797"/>
+<msg timestamp="20230607 18:47:49.624" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="2770727d-677c-4f8c-be38-6a1dda7c64ba")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:49.223" endtime="20230607 18:47:49.624"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:04.799" endtime="20230601 23:17:04.844"/>
+<status status="PASS" starttime="20230607 18:47:49.624" endtime="20230607 18:47:49.645"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:04.846" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="3cbcfaec-a534-45ab-87bd-fbbadefe5cbe")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:04.845" endtime="20230601 23:17:06.300"/>
+<msg timestamp="20230607 18:47:49.646" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="2770727d-677c-4f8c-be38-6a1dda7c64ba")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:47:49.645" endtime="20230607 18:47:51.412"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:04.353" endtime="20230601 23:17:06.303"/>
+<status status="PASS" starttime="20230607 18:47:49.215" endtime="20230607 18:47:51.412"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:04.352" endtime="20230601 23:17:06.305"/>
+<status status="PASS" starttime="20230607 18:47:49.215" endtime="20230607 18:47:51.415"/>
 </kw>
 <kw name="Enter Email" library="LoginKW">
 <arg>sabree4u2@gmail.com</arg>
@@ -194,30 +194,30 @@ Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:06.354" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="40555fd7-9b81-4faf-859f-a4726672c28f")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:06.308" endtime="20230601 23:17:06.354"/>
+<msg timestamp="20230607 18:47:51.445" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="1e8873fc-eaf4-48f8-bfda-60be25d3012f")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:51.420" endtime="20230607 18:47:51.445"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:06.873" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="40555fd7-9b81-4faf-859f-a4726672c28f")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:06.357" endtime="20230601 23:17:06.873"/>
+<msg timestamp="20230607 18:47:51.852" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="1e8873fc-eaf4-48f8-bfda-60be25d3012f")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:51.446" endtime="20230607 18:47:51.853"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:06.880" endtime="20230601 23:17:06.902"/>
+<status status="PASS" starttime="20230607 18:47:51.855" endtime="20230607 18:47:51.901"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <arg>${input}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:06.903" level="INFO">Typing text 'sabree4u2@gmail.com' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="40555fd7-9b81-4faf-859f-a4726672c28f")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:06.903" endtime="20230601 23:17:06.956"/>
+<msg timestamp="20230607 18:47:51.904" level="INFO">Typing text 'sabree4u2@gmail.com' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="1e8873fc-eaf4-48f8-bfda-60be25d3012f")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:47:51.901" endtime="20230607 18:47:52.004"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:06.307" endtime="20230601 23:17:06.958"/>
+<status status="PASS" starttime="20230607 18:47:51.416" endtime="20230607 18:47:52.005"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:06.306" endtime="20230601 23:17:06.959"/>
+<status status="PASS" starttime="20230607 18:47:51.415" endtime="20230607 18:47:52.006"/>
 </kw>
 <kw name="Enter Password" library="LoginKW">
 <arg>Nausheen4Only</arg>
@@ -228,30 +228,30 @@ Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:06.971" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="77c21b7d-c74d-45ac-ae28-b61ccaf7a9e3")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:06.962" endtime="20230601 23:17:06.971"/>
+<msg timestamp="20230607 18:47:52.017" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="c0a797c2-1a5b-4f8b-98ce-f5dba0a56709")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:52.009" endtime="20230607 18:47:52.017"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:07.324" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="77c21b7d-c74d-45ac-ae28-b61ccaf7a9e3")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:06.974" endtime="20230601 23:17:07.324"/>
+<msg timestamp="20230607 18:47:52.384" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="c0a797c2-1a5b-4f8b-98ce-f5dba0a56709")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:52.017" endtime="20230607 18:47:52.384"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:07.326" endtime="20230601 23:17:07.349"/>
+<status status="PASS" starttime="20230607 18:47:52.384" endtime="20230607 18:47:52.427"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <arg>${input}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:07.353" level="INFO">Typing text 'Nausheen4Only' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="77c21b7d-c74d-45ac-ae28-b61ccaf7a9e3")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:07.350" endtime="20230601 23:17:07.385"/>
+<msg timestamp="20230607 18:47:52.430" level="INFO">Typing text 'Nausheen4Only' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="c0a797c2-1a5b-4f8b-98ce-f5dba0a56709")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:47:52.427" endtime="20230607 18:47:52.503"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:06.961" endtime="20230601 23:17:07.388"/>
+<status status="PASS" starttime="20230607 18:47:52.009" endtime="20230607 18:47:52.503"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:06.960" endtime="20230601 23:17:07.389"/>
+<status status="PASS" starttime="20230607 18:47:52.007" endtime="20230607 18:47:52.504"/>
 </kw>
 <kw name="Click On Sign in button" library="LoginKW">
 <kw name="Click For Element" library="common">
@@ -260,44 +260,215 @@ Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:07.397" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="4e2d23a7-d856-4bd8-9df9-6e0a3fe1cac0")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:07.392" endtime="20230601 23:17:07.398"/>
+<msg timestamp="20230607 18:47:52.518" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="82cbf912-88a5-4397-a3e5-9315b8b1cb97")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:52.508" endtime="20230607 18:47:52.518"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:07.738" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="4e2d23a7-d856-4bd8-9df9-6e0a3fe1cac0")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:07.400" endtime="20230601 23:17:07.738"/>
+<msg timestamp="20230607 18:47:52.860" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="82cbf912-88a5-4397-a3e5-9315b8b1cb97")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:52.519" endtime="20230607 18:47:52.861"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:07.741" endtime="20230601 23:17:07.760"/>
+<status status="PASS" starttime="20230607 18:47:52.861" endtime="20230607 18:47:52.904"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:07.762" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="4e2d23a7-d856-4bd8-9df9-6e0a3fe1cac0")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:07.761" endtime="20230601 23:17:08.015"/>
+<msg timestamp="20230607 18:47:52.904" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="82cbf912-88a5-4397-a3e5-9315b8b1cb97")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:47:52.904" endtime="20230607 18:47:53.225"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:07.391" endtime="20230601 23:17:08.018"/>
+<status status="PASS" starttime="20230607 18:47:52.506" endtime="20230607 18:47:53.225"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:07.390" endtime="20230601 23:17:08.018"/>
+<status status="PASS" starttime="20230607 18:47:52.504" endtime="20230607 18:47:53.225"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:03.535" endtime="20230601 23:17:08.019"/>
+<status status="PASS" starttime="20230607 18:47:48.121" endtime="20230607 18:47:53.225"/>
 </kw>
-<kw name="create_workspace" library="WorkspaceKW">
+<kw name="Delete workspace" library="WorkspaceKW">
 <arg>test</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230601 23:17:10.030" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230601 23:17:08.021" endtime="20230601 23:17:10.030"/>
+<msg timestamp="20230607 18:47:55.240" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230607 18:47:53.225" endtime="20230607 18:47:55.240"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{my_list}</var>
+<arg>${WORKSPACE_LIST}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230607 18:47:55.310" level="INFO">@{my_list} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="8c00d4df-76b7-4430-bce1-7e835cc3820b")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<status status="PASS" starttime="20230607 18:47:55.240" endtime="20230607 18:47:55.310"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{my_list}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="8c00d4df-76b7-4430-bce1-7e835cc3820b")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230607 18:47:55.354" level="INFO">${text} = Another test
+18</msg>
+<status status="PASS" starttime="20230607 18:47:55.311" endtime="20230607 18:47:55.354"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${str}</var>
+<arg>${text}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230607 18:47:55.355" level="INFO">${str} = Another test
+18</msg>
+<status status="PASS" starttime="20230607 18:47:55.354" endtime="20230607 18:47:55.355"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${Id}</var>
+<arg>${str}</arg>
+<arg>\n</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230607 18:47:55.355" level="INFO">${Id} = ['Another test', '18']</msg>
+<status status="PASS" starttime="20230607 18:47:55.355" endtime="20230607 18:47:55.355"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Id}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230607 18:47:55.355" endtime="20230607 18:47:55.356"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Id}[0]&quot; == &quot;${WorkspaceName}&quot;">
+<kw name="Click For Element" library="common">
+<arg>//*[text()='${Id}[0]']</arg>
+<status status="NOT RUN" starttime="20230607 18:47:55.357" endtime="20230607 18:47:55.357"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Workspace Selected"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230607 18:47:55.357" endtime="20230607 18:47:55.357"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${RATING}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230601 23:17:10.033" endtime="20230601 23:17:13.698"/>
+<status status="NOT RUN" starttime="20230607 18:47:55.357" endtime="20230607 18:47:55.357"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${RATING}</arg>
+<status status="NOT RUN" starttime="20230607 18:47:55.357" endtime="20230607 18:47:55.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230607 18:47:55.358" endtime="20230607 18:47:55.358"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${WORKSPACE_EDIT_BUTTON}</arg>
+<status status="NOT RUN" starttime="20230607 18:47:55.359" endtime="20230607 18:47:55.359"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${DELETE_WORKSPACE_BUTTON}</arg>
+<status status="NOT RUN" starttime="20230607 18:47:55.359" endtime="20230607 18:47:55.359"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${DELETE_WORKSPACE_FIELD}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20230607 18:47:55.359" endtime="20230607 18:47:55.359"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230607 18:47:55.359" endtime="20230607 18:47:55.359"/>
+</kw>
+<kw name="Input For Text" library="common">
+<arg>${DELETE_WORKSPACE_FIELD}</arg>
+<arg>${text}</arg>
+<status status="NOT RUN" starttime="20230607 18:47:55.359" endtime="20230607 18:47:55.359"/>
+</kw>
+<kw name="Click For Element" library="common">
+<arg>${CONFIRMATION_BUTTON}</arg>
+<status status="NOT RUN" starttime="20230607 18:47:55.359" endtime="20230607 18:47:55.360"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" starttime="20230607 18:47:55.360" endtime="20230607 18:47:55.360"/>
+</kw>
+<status status="NOT RUN" starttime="20230607 18:47:55.357" endtime="20230607 18:47:55.360"/>
+</branch>
+<status status="PASS" starttime="20230607 18:47:55.357" endtime="20230607 18:47:55.360"/>
+</if>
+<status status="PASS" starttime="20230607 18:47:55.310" endtime="20230607 18:47:55.360"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="0d01ffed-cb84-489e-b2d9-b6b30351111f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230607 18:47:55.415" level="INFO">${text} = test
+0</msg>
+<status status="PASS" starttime="20230607 18:47:55.361" endtime="20230607 18:47:55.415"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${str}</var>
+<arg>${text}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230607 18:47:55.416" level="INFO">${str} = test
+0</msg>
+<status status="PASS" starttime="20230607 18:47:55.416" endtime="20230607 18:47:55.417"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${Id}</var>
+<arg>${str}</arg>
+<arg>\n</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230607 18:47:55.418" level="INFO">${Id} = ['test', '0']</msg>
+<status status="PASS" starttime="20230607 18:47:55.417" endtime="20230607 18:47:55.418"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Id}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230607 18:47:55.418" endtime="20230607 18:47:55.420"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Id}[0]&quot; == &quot;${WorkspaceName}&quot;">
+<kw name="Click For Element" library="common">
+<arg>//*[text()='${Id}[0]']</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${element1}</var>
+<arg>${element}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230607 18:47:55.433" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="ffb568af-8e76-4f60-ad7e-7256849d8e19")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:55.422" endtime="20230607 18:47:55.433"/>
+</kw>
+<kw name="Highlight" library="highlight">
+<arg>${element1}</arg>
+<doc>Highlights (blinks) a Selenium Webdriver element</doc>
+<msg timestamp="20230607 18:47:55.804" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="ffb568af-8e76-4f60-ad7e-7256849d8e19")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:55.434" endtime="20230607 18:47:55.804"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230607 18:47:55.805" endtime="20230607 18:47:55.829"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230607 18:47:55.830" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="ffb568af-8e76-4f60-ad7e-7256849d8e19")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:47:55.829" endtime="20230607 18:47:56.196"/>
+</kw>
+<status status="PASS" starttime="20230607 18:47:55.421" endtime="20230607 18:47:56.196"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Workspace Selected"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230607 18:47:56.197" endtime="20230607 18:47:56.198"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${RATING}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230607 18:47:56.198" endtime="20230607 18:47:58.869"/>
 </kw>
 <kw name="Click For Element" library="common">
 <arg>${RATING}</arg>
@@ -305,139 +476,132 @@ Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:13.713" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="8530cff5-fdfe-46c6-b09c-b47cdbfabc59")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:13.701" endtime="20230601 23:17:13.713"/>
+<msg timestamp="20230607 18:47:58.881" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="312d48ff-3ea3-46d7-aa12-8e1263a96791")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:58.871" endtime="20230607 18:47:58.881"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:14.050" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="8530cff5-fdfe-46c6-b09c-b47cdbfabc59")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:13.715" endtime="20230601 23:17:14.051"/>
+<msg timestamp="20230607 18:47:59.230" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="312d48ff-3ea3-46d7-aa12-8e1263a96791")&gt;</msg>
+<status status="PASS" starttime="20230607 18:47:58.882" endtime="20230607 18:47:59.230"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:14.054" endtime="20230601 23:17:14.083"/>
+<status status="PASS" starttime="20230607 18:47:59.231" endtime="20230607 18:47:59.251"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:14.085" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="8530cff5-fdfe-46c6-b09c-b47cdbfabc59")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:14.084" endtime="20230601 23:17:14.321"/>
+<msg timestamp="20230607 18:47:59.252" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="312d48ff-3ea3-46d7-aa12-8e1263a96791")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:47:59.251" endtime="20230607 18:47:59.480"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:13.699" endtime="20230601 23:17:14.326"/>
+<status status="PASS" starttime="20230607 18:47:58.869" endtime="20230607 18:47:59.480"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230601 23:17:16.340" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230601 23:17:14.328" endtime="20230601 23:17:16.341"/>
+<msg timestamp="20230607 18:48:01.482" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230607 18:47:59.481" endtime="20230607 18:48:01.483"/>
 </kw>
 <kw name="Click For Element" library="common">
-<arg>${CREATE_NEW_WORKSPACE_BUTTON}</arg>
+<arg>${WORKSPACE_EDIT_BUTTON}</arg>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:16.358" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="72bbabd9-46eb-48f0-b532-6f9dca499362")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:16.347" endtime="20230601 23:17:16.358"/>
+<msg timestamp="20230607 18:48:01.505" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="26a9c115-ce1c-436a-8fe9-0f839dfb5f90")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:01.485" endtime="20230607 18:48:01.505"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:16.744" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="72bbabd9-46eb-48f0-b532-6f9dca499362")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:16.361" endtime="20230601 23:17:16.744"/>
+<msg timestamp="20230607 18:48:01.885" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="26a9c115-ce1c-436a-8fe9-0f839dfb5f90")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:01.506" endtime="20230607 18:48:01.885"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:16.754" endtime="20230601 23:17:16.829"/>
+<status status="PASS" starttime="20230607 18:48:01.886" endtime="20230607 18:48:01.944"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:16.832" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="72bbabd9-46eb-48f0-b532-6f9dca499362")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:16.830" endtime="20230601 23:17:17.208"/>
+<msg timestamp="20230607 18:48:01.947" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="26a9c115-ce1c-436a-8fe9-0f839dfb5f90")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:48:01.944" endtime="20230607 18:48:02.217"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:16.346" endtime="20230601 23:17:17.214"/>
+<status status="PASS" starttime="20230607 18:48:01.483" endtime="20230607 18:48:02.218"/>
 </kw>
-<kw name="Get Count of Elements" library="common">
-<var>${before}</var>
-<arg>${WORKSPACE_LIST}</arg>
+<kw name="Click For Element" library="common">
+<arg>${DELETE_WORKSPACE_BUTTON}</arg>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:17.250" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="4925416c-b117-42ff-a436-01c63489c2d4")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:17.222" endtime="20230601 23:17:17.250"/>
+<msg timestamp="20230607 18:48:02.239" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="17b15cb5-f6af-4dec-bbb3-959146654f61")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:02.223" endtime="20230607 18:48:02.239"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:17.611" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="4925416c-b117-42ff-a436-01c63489c2d4")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:17.256" endtime="20230601 23:17:17.612"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${my_list}</var>
-<arg>${element}</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20230601 23:17:17.656" level="INFO">${my_list} = 7</msg>
-<status status="PASS" starttime="20230601 23:17:17.622" endtime="20230601 23:17:17.657"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${my_list}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230601 23:17:17.663" endtime="20230601 23:17:17.665"/>
-</kw>
-<msg timestamp="20230601 23:17:17.671" level="INFO">${before} = 7</msg>
-<status status="PASS" starttime="20230601 23:17:17.216" endtime="20230601 23:17:17.671"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230601 23:17:18.682" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230601 23:17:17.678" endtime="20230601 23:17:18.683"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${before}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230601 23:17:18.685" endtime="20230601 23:17:18.686"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230601 23:17:19.697" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230601 23:17:18.687" endtime="20230601 23:17:19.700"/>
-</kw>
-<kw name="Input For Text" library="common">
-<arg>${NEW_WORKSPACE_NAME_FIELD}</arg>
-<arg>${nameC}</arg>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${element1}</var>
-<arg>${element}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:19.723" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="dcd905d4-d0d8-4189-b77e-8f28a6e1c642")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:19.706" endtime="20230601 23:17:19.723"/>
-</kw>
-<kw name="Highlight" library="highlight">
-<arg>${element1}</arg>
-<doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:20.096" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="dcd905d4-d0d8-4189-b77e-8f28a6e1c642")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:19.731" endtime="20230601 23:17:20.097"/>
+<msg timestamp="20230607 18:48:02.610" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="17b15cb5-f6af-4dec-bbb3-959146654f61")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:02.240" endtime="20230607 18:48:02.610"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:20.104" endtime="20230601 23:17:20.146"/>
+<status status="PASS" starttime="20230607 18:48:02.610" endtime="20230607 18:48:02.643"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230607 18:48:02.646" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="17b15cb5-f6af-4dec-bbb3-959146654f61")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:48:02.644" endtime="20230607 18:48:03.014"/>
+</kw>
+<status status="PASS" starttime="20230607 18:48:02.220" endtime="20230607 18:48:03.014"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${DELETE_WORKSPACE_FIELD}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230607 18:48:03.037" level="INFO">${text} = test</msg>
+<status status="PASS" starttime="20230607 18:48:03.015" endtime="20230607 18:48:03.037"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230607 18:48:03.038" endtime="20230607 18:48:03.038"/>
+</kw>
+<kw name="Input For Text" library="common">
+<arg>${DELETE_WORKSPACE_FIELD}</arg>
+<arg>${text}</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${element1}</var>
+<arg>${element}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230607 18:48:03.045" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="338a65e1-741a-43c6-9745-9589236fa503")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:03.040" endtime="20230607 18:48:03.045"/>
+</kw>
+<kw name="Highlight" library="highlight">
+<arg>${element1}</arg>
+<doc>Highlights (blinks) a Selenium Webdriver element</doc>
+<msg timestamp="20230607 18:48:03.382" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="338a65e1-741a-43c6-9745-9589236fa503")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:03.045" endtime="20230607 18:48:03.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230607 18:48:03.384" endtime="20230607 18:48:03.442"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <arg>${input}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:20.151" level="INFO">Typing text 'test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="dcd905d4-d0d8-4189-b77e-8f28a6e1c642")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:20.148" endtime="20230601 23:17:20.194"/>
+<msg timestamp="20230607 18:48:03.444" level="INFO">Typing text 'test' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="338a65e1-741a-43c6-9745-9589236fa503")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:48:03.442" endtime="20230607 18:48:03.498"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:19.704" endtime="20230601 23:17:20.197"/>
+<status status="PASS" starttime="20230607 18:48:03.039" endtime="20230607 18:48:03.498"/>
 </kw>
 <kw name="Click For Element" library="common">
 <arg>${CONFIRMATION_BUTTON}</arg>
@@ -445,97 +609,68 @@ Driver [C:\WINDOWS\system32\config\systemprofile\.wdm\drivers\geckodriver\win64\
 <var>${element1}</var>
 <arg>${element}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:20.207" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="37536979-7929-4afd-a4eb-df12c86c1c26")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:20.201" endtime="20230601 23:17:20.207"/>
+<msg timestamp="20230607 18:48:03.514" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="1123905a-8162-47f3-bf45-24dc834cdf42")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:03.502" endtime="20230607 18:48:03.514"/>
 </kw>
 <kw name="Highlight" library="highlight">
 <arg>${element1}</arg>
 <doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:20.561" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="37536979-7929-4afd-a4eb-df12c86c1c26")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:20.209" endtime="20230601 23:17:20.562"/>
+<msg timestamp="20230607 18:48:03.892" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="1123905a-8162-47f3-bf45-24dc834cdf42")&gt;</msg>
+<status status="PASS" starttime="20230607 18:48:03.515" endtime="20230607 18:48:03.892"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230601 23:17:20.570" endtime="20230601 23:17:20.621"/>
+<status status="PASS" starttime="20230607 18:48:03.893" endtime="20230607 18:48:03.946"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${element1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230601 23:17:20.624" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="37536979-7929-4afd-a4eb-df12c86c1c26")&gt;'.</msg>
-<status status="PASS" starttime="20230601 23:17:20.622" endtime="20230601 23:17:21.024"/>
+<msg timestamp="20230607 18:48:03.949" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="314b27b6-3d07-4a07-ab5c-8cd0d561ccd6", element="1123905a-8162-47f3-bf45-24dc834cdf42")&gt;'.</msg>
+<status status="PASS" starttime="20230607 18:48:03.946" endtime="20230607 18:48:04.279"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:20.199" endtime="20230601 23:17:21.031"/>
+<status status="PASS" starttime="20230607 18:48:03.499" endtime="20230607 18:48:04.279"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230601 23:17:23.050" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230601 23:17:21.035" endtime="20230601 23:17:23.051"/>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<msg timestamp="20230607 18:48:04.280" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20230607 18:48:04.280" endtime="20230607 18:48:04.281"/>
 </kw>
-<kw name="Get Count of Elements" library="common">
-<var>${after}</var>
-<arg>${WORKSPACE_LIST}</arg>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${element1}</var>
-<arg>${element}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230601 23:17:23.082" level="INFO">${element1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="075d2374-1223-4ca7-8169-4930a9d7a413")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:23.059" endtime="20230601 23:17:23.083"/>
-</kw>
-<kw name="Highlight" library="highlight">
-<arg>${element1}</arg>
-<doc>Highlights (blinks) a Selenium Webdriver element</doc>
-<msg timestamp="20230601 23:17:23.464" level="INFO">Value:::    &lt;selenium.webdriver.remote.webelement.WebElement (session="e2b34df0-d871-4483-abd9-38c244600170", element="075d2374-1223-4ca7-8169-4930a9d7a413")&gt;</msg>
-<status status="PASS" starttime="20230601 23:17:23.085" endtime="20230601 23:17:23.464"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${my_list}</var>
-<arg>${element}</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20230601 23:17:23.481" level="INFO">${my_list} = 8</msg>
-<status status="PASS" starttime="20230601 23:17:23.467" endtime="20230601 23:17:23.481"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${my_list}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230601 23:17:23.484" endtime="20230601 23:17:23.485"/>
-</kw>
-<msg timestamp="20230601 23:17:23.486" level="INFO">${after} = 8</msg>
-<status status="PASS" starttime="20230601 23:17:23.057" endtime="20230601 23:17:23.486"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${after}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230601 23:17:23.489" endtime="20230601 23:17:23.490"/>
-</kw>
-<status status="PASS" starttime="20230601 23:17:08.020" endtime="20230601 23:17:23.492"/>
+<status status="PASS" starttime="20230607 18:47:55.420" endtime="20230607 18:48:04.281"/>
+</branch>
+<status status="PASS" starttime="20230607 18:47:55.420" endtime="20230607 18:48:04.282"/>
+</if>
+<status status="PASS" starttime="20230607 18:47:55.360" endtime="20230607 18:48:04.283"/>
+</iter>
+<status status="PASS" starttime="20230607 18:47:55.310" endtime="20230607 18:48:04.283"/>
+</for>
+<status status="PASS" starttime="20230607 18:47:53.225" endtime="20230607 18:48:04.285"/>
 </kw>
 <kw name="Close My Browser" library="common" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230601 23:17:25.507" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230601 23:17:23.495" endtime="20230601 23:17:25.507"/>
+<msg timestamp="20230607 18:48:06.298" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230607 18:48:04.289" endtime="20230607 18:48:06.298"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230601 23:17:25.510" endtime="20230601 23:17:29.154"/>
+<status status="PASS" starttime="20230607 18:48:06.298" endtime="20230607 18:48:09.762"/>
 </kw>
-<status status="PASS" starttime="20230601 23:17:23.494" endtime="20230601 23:17:29.155"/>
+<status status="PASS" starttime="20230607 18:48:04.287" endtime="20230607 18:48:09.762"/>
 </kw>
-<tag>Create</tag>
-<status status="PASS" starttime="20230601 23:16:52.031" endtime="20230601 23:17:29.155"/>
+<tag>Delete</tag>
+<status status="PASS" starttime="20230607 18:47:37.387" endtime="20230607 18:48:09.764"/>
 </test>
 <doc>Workspace</doc>
-<status status="PASS" starttime="20230601 23:16:51.461" endtime="20230601 23:17:29.208"/>
+<status status="PASS" starttime="20230607 18:47:36.490" endtime="20230607 18:48:09.769"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Create</stat>
+<stat pass="1" fail="0" skip="0">Delete</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="WorkspaceTC">WorkspaceTC</stat>

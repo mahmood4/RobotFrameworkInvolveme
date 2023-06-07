@@ -31,7 +31,8 @@ Start
     ${handles}=  Get Window Handles
     Maximize Browser Window
     Verify Current URL
-    ${SCREEN_TEXTS}  Read Json    ../../TestData/Involve_Test.json
+    #${SCREEN_TEXTS}  Read Json    ../../TestData/Involve_Test.json
+    ${SCREEN_TEXTS}  Read Json     C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json
     Set Global Variable    ${SCREEN_TEXTS}
 
 Read Json

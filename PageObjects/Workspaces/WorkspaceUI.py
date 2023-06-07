@@ -32,7 +32,9 @@ DROP_DOWN_BUTTON = "xpath://div[1]/div[3]/div[1]/div[2]/div[1]/button[1]//*[name
 DELETE_PROJECT_BUTTON = "xpath:(//div[@class='md:grid md:grid-cols-12 md:gap-x-5 lg:gap-x-6 xl:gap-x-7 sm:mt-4 md:mt-8 lg:mt-16']//button[text()='Delete project'])[1]"
 DELETE_PROJECT_BUTTON1 = "xpath://button[@id='confirm-delete-button']"
 #  _WORKSPACE_LIST = (By.CSS_SELECTOR, ".mt-6 a")
-WORKSPACE_LIST = "xpath://div[@class='mt-6 space-y-1 overflow-y-auto max-h-[25.7rem]']/a/span[@class='mr-3 truncate']"
+WORKSPACE_LIST_OLD = "xpath://div[@class='mt-6 space-y-1 overflow-y-auto max-h-[25.7rem]']/a/span[@class='mr-3 truncate']"
+WORKSPACE_LIST = "xpath://div[@class='md:col-span-4 lg:col-span-3']//a"
+WORKSPACE_LIST_Names = "xpath://div[@class='md:col-span-4 lg:col-span-3']//a/span[@class='mr-3 truncate'][1]"
 PROJECTS_BLOCK = "xpath://h1/a"
 #  _PROJECTS_BLOCK = (By.XPATH,"//a[@class='px-1.5 hover:text-purple-600 whitespace-nowrap cursor-pointer text-purple-600 border-b-2 border-purple-600']")
 PROJECTS_TITLES = "css:h1 a"
