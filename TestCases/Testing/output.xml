@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20231102 22:13:19.438" rpa="false" schemaversion="3">
+<suite id="s1" name="TimeTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\TimeTC.robot">
+<test id="s1-t1" name="Test Login" line="8">
+<kw name="Get Current Date" library="DateTime">
+<var>${date}</var>
+<arg>UTC</arg>
+<arg>exclude_millis=yes</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20231102 22:13:19.710" level="INFO">${date} = 2023-11-03 02:13:20</msg>
+<status status="PASS" starttime="20231102 22:13:19.710" endtime="20231102 22:13:19.710"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${future}</var>
+<arg>${date}</arg>
+<arg>result_format=%H_%M</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20231102 22:13:19.710" level="INFO">${future} = 02_13</msg>
+<status status="PASS" starttime="20231102 22:13:19.710" endtime="20231102 22:13:19.710"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${future}</arg>
+<arg>console=yes</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231102 22:13:19.710" level="INFO">02_13</msg>
+<status status="PASS" starttime="20231102 22:13:19.710" endtime="20231102 22:13:19.710"/>
+</kw>
+<status status="PASS" starttime="20231102 22:13:19.710" endtime="20231102 22:13:19.710"/>
+</test>
+<doc>Test Case Login</doc>
+<status status="PASS" starttime="20231102 22:13:19.438" endtime="20231102 22:13:19.710"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TimeTC">TimeTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

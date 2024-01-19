@@ -1,0 +1,15 @@
+datasources:dfe4f733a2664800c697b054ffa6135b15008949
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:3eedaead1a8c1a695a1b7022796695bae232e1fb
+--suite TestCases.ForgotPassword.ForgotPassword
+--suite TestCases.Login.ContactTC
+--suite TestCases.Login.LoginTC
+--suite TestCases.Login.LoginTC1
+--suite TestCases.Login.LoginTC2
+--suite TestCases.Login.RegisterTC
+--suite TestCases.Login.SearchTC
+--suite TestCases.Login.TestTC
+--suite TestCases.Robot Reports.Test1
+--suite TestCases.Workspaces.Demo
+--suite TestCases.Workspaces.WorkspaceTC

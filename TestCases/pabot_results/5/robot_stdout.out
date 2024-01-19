@@ -1,0 +1,29 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Login                                                               
+==============================================================================
+TestCases.Login.LoginTC :: Test Case Login                                    
+==============================================================================
+Test Login                                                            | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.
+------------------------------------------------------------------------------
+Test Login N Logout                                                   | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.
+------------------------------------------------------------------------------
+Test Invalid Login                                                    | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.
+------------------------------------------------------------------------------
+TestCases.Login.LoginTC :: Test Case Login                            | FAIL |
+3 tests, 0 passed, 3 failed
+==============================================================================
+TestCases.Login                                                       | FAIL |
+3 tests, 0 passed, 3 failed
+==============================================================================
+TestCases                                                             | FAIL |
+3 tests, 0 passed, 3 failed
+==============================================================================
+Output:  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\pabot_results\5\output.xml

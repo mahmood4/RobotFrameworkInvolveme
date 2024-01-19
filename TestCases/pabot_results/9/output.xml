@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.5 on win32)" generated="2024-01-18T23:42:23.032570" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases">
+<suite id="s1-s1" name="Login" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login">
+<suite id="s1-s1-s1" name="SearchTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot">
+<test id="s1-s1-s1-t1" name="Check Item is found by Search button." line="10">
+<kw name="Start" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
+<kw name="Get Chromedriver Path" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:23.911358" elapsed="0.010930"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.922288" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.923289" elapsed="0.000000"/>
+</kw>
+<msg time="2024-01-18T23:42:23.923289" level="FAIL">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</msg>
+<status status="FAIL" start="2024-01-18T23:42:23.911358" elapsed="0.011931">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</branch>
+<branch type="ELSE IF" condition="&quot;${browser}&quot; == &quot;firefox&quot;">
+<kw name="Disable Download Dialog" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:23.924388" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.925142" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-18T23:42:23.923289" elapsed="0.001853"/>
+</branch>
+<branch type="ELSE">
+<kw name="Disable Download Dialog" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:23.925142" elapsed="0.001002"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.926144" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-18T23:42:23.925142" elapsed="0.001002"/>
+</branch>
+<status status="FAIL" start="2024-01-18T23:42:23.911358" elapsed="0.014786">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</if>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.926144" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.926144" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Current URL" owner="common">
+<status status="NOT RUN" start="2024-01-18T23:42:23.926144" elapsed="0.000000"/>
+</kw>
+<kw name="Read Json" owner="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.926144" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:23.926144" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-01-18T23:42:23.911358" elapsed="0.014786">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</kw>
+<kw name="Close My Browser" owner="common" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-18T23:42:25.941108" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-18T23:42:23.926144" elapsed="2.014964"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-01-18T23:42:25.941108" elapsed="0.015738"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:23.926144" elapsed="2.030702"/>
+</kw>
+<doc>Check links opening in other tab when click "Add New Category" button.</doc>
+<status status="FAIL" start="2024-01-18T23:42:23.911358" elapsed="2.045488">Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</test>
+<test id="s1-s1-s1-t2" name="Check Item is Not found by Search button." line="18">
+<kw name="Start" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
+<kw name="Get Chromedriver Path" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:25.961767" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.961767" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.961767" elapsed="0.000000"/>
+</kw>
+<msg time="2024-01-18T23:42:25.961767" level="FAIL">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</msg>
+<status status="FAIL" start="2024-01-18T23:42:25.960769" elapsed="0.000998">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</branch>
+<branch type="ELSE IF" condition="&quot;${browser}&quot; == &quot;firefox&quot;">
+<kw name="Disable Download Dialog" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:25.961767" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.961767" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-18T23:42:25.961767" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Disable Download Dialog" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:25.965165" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.965165" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-18T23:42:25.961767" elapsed="0.003398"/>
+</branch>
+<status status="FAIL" start="2024-01-18T23:42:25.960769" elapsed="0.004396">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</if>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.966166" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.966166" elapsed="0.001058"/>
+</kw>
+<kw name="Verify Current URL" owner="common">
+<status status="NOT RUN" start="2024-01-18T23:42:25.967224" elapsed="0.000000"/>
+</kw>
+<kw name="Read Json" owner="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.968223" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:25.968223" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-01-18T23:42:25.958845" elapsed="0.009378">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</kw>
+<kw name="Close My Browser" owner="common" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-18T23:42:27.981675" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-18T23:42:25.970439" elapsed="2.011236"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-01-18T23:42:27.981675" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:25.969438" elapsed="2.013237"/>
+</kw>
+<doc>Check links opening in other tab when click "Add New Category" button.</doc>
+<status status="FAIL" start="2024-01-18T23:42:25.957846" elapsed="2.024829">Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</test>
+<test id="s1-s1-s1-t3" name="User searches without any product." line="25">
+<kw name="Start" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
+<kw name="Get Chromedriver Path" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<msg time="2024-01-18T23:42:27.990779" level="FAIL">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</msg>
+<status status="FAIL" start="2024-01-18T23:42:27.986333" elapsed="0.004446">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</branch>
+<branch type="ELSE IF" condition="&quot;${browser}&quot; == &quot;firefox&quot;">
+<kw name="Disable Download Dialog" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Disable Download Dialog" owner="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</branch>
+<status status="FAIL" start="2024-01-18T23:42:27.986333" elapsed="0.004446">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</if>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Current URL" owner="common">
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Read Json" owner="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:27.990779" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-01-18T23:42:27.982675" elapsed="0.008104">Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</kw>
+<kw name="Close My Browser" owner="common" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-18T23:42:30.016461" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-18T23:42:27.990779" elapsed="2.025682"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-01-18T23:42:30.016461" elapsed="0.001002"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:27.990779" elapsed="2.026684"/>
+</kw>
+<doc>Check links opening in other tab when click "Add New Category" button.</doc>
+<status status="FAIL" start="2024-01-18T23:42:27.982675" elapsed="2.034788">Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.</status>
+</test>
+<status status="FAIL" start="2024-01-18T23:42:23.091109" elapsed="6.927788"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:23.088623" elapsed="6.931275"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:23.040658" elapsed="6.982836"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s1" name="Login">TestCases.Login</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s1-s1" name="SearchTC">TestCases.Login.SearchTC</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-18T23:42:22.964741" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\RegisterTC.robot' on line 12: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:22.968226" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot' on line 9: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:23.003488" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 3: Non-existing setting 'Library SeleniumLibrary'.</msg>
+<msg time="2024-01-18T23:42:23.003488" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 5: Non-existing setting 'Resource ../Resources/Login_resources.robot'.</msg>
+<msg time="2024-01-18T23:42:23.003488" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 7: Non-existing setting 'Library DataDriver ../TestData/DDTXLS.xlsx encoding="ISO-8859-1"'.</msg>
+<msg time="2024-01-18T23:42:23.003488" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 9: Non-existing setting 'Library String'.</msg>
+<msg time="2024-01-18T23:42:23.003488" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 11: Non-existing setting 'Suite Setup Login_resources.Start TestCase'.</msg>
+<msg time="2024-01-18T23:42:23.003488" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 13: Non-existing setting 'Suite Teardown Login_resources.Finish TestCase'.</msg>
+<msg time="2024-01-18T23:42:23.003488" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 15: Non-existing setting 'Test Template Invalid login'.</msg>
+<msg time="2024-01-18T23:42:23.007344" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 3: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:23.007344" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 4: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:23.007344" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 5: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:23.007344" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 6: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:23.033573" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\Scripts\robot.exe
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\lib\site-packages</msg>
+<msg time="2024-01-18T23:42:23.489929" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 70: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:23.489929" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 111: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:23.489929" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 116: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:23.489929" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 121: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:23.489929" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 138: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:23.489929" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 145: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

@@ -1,1 +1,26 @@
-1684626571360	geckodriver	INFO	Listening on 127.0.0.1:56658
+1705629179415	geckodriver	INFO	Listening on 127.0.0.1:61686
+1705629182573	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61687" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileFwhwJ3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1705629185386	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1705629185687	Marionette	INFO	Listening on port 61694
+Read port: 61694
+WebDriver BiDi listening on ws://127.0.0.1:61687
+1705629185849	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: Failed to initialize GPU process
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+DevTools listening on ws://127.0.0.1:61687/devtools/browser/d5504ecc-e52f-413b-a7b5-ca8e19f2ec7c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+1705629215438	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+1705629229244	Marionette	INFO	Stopped listening on port 61694
+JavaScript warning: https://cdn.ivlv.me/ebcd346e-73c7-42c0-b597-e99086bd4111/js/dashboard/app.js, line 2: Script terminated by timeout at:
+o@https://cdn.ivlv.me/ebcd346e-73c7-42c0-b597-e99086bd4111/js/dashboard/app.js:2:75009
+
+Dynamically enable window occlusion 1

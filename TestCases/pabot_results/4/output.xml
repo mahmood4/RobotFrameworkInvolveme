@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.5 on win32)" generated="2024-01-18T23:42:16.926663" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases">
+<suite id="s1-s1" name="Login" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login">
+<suite id="s1-s1-s1" name="DatabaseTest" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\DatabaseTest.robot">
+<test id="s1-s1-s1-t1" name="Verify Successful creation of Table" line="13">
+<kw name="Connect DB">
+<kw name="Connect To Database">
+<msg time="2024-01-18T23:42:17.008359" level="FAIL">No keyword with name 'Connect To Database' found.</msg>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPassword}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+<status status="FAIL" start="2024-01-18T23:42:17.008359" elapsed="0.000000">No keyword with name 'Connect To Database' found.</status>
+</kw>
+<status status="FAIL" start="2024-01-18T23:42:17.006684" elapsed="0.002676">No keyword with name 'Connect To Database' found.</status>
+</kw>
+<kw name="Execute SQL String">
+<var>${output}</var>
+<arg>CREATE TABLE Persons (PersonID int, FirstName varchar(255), Address varchar(255), City varchar(255));</arg>
+<status status="NOT RUN" start="2024-01-18T23:42:17.011160" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:17.011160" elapsed="0.000000"/>
+</kw>
+<doc>This test case verifies that user is able to create a table successfully</doc>
+<status status="FAIL" start="2024-01-18T23:42:17.004072" elapsed="0.007088">No keyword with name 'Connect To Database' found.</status>
+</test>
+<test id="s1-s1-s1-t2" name="Verify Data Insertion in Table" line="19">
+<kw name="Execute SQL Script">
+<msg time="2024-01-18T23:42:17.014398" level="FAIL">No keyword with name 'Execute SQL Script' found.</msg>
+<var>${output}</var>
+<arg>./Resources/DB Data/insert.sql</arg>
+<status status="FAIL" start="2024-01-18T23:42:17.014398" elapsed="0.000000">No keyword with name 'Execute SQL Script' found.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:17.014398" elapsed="0.000000"/>
+</kw>
+<doc>This test case verifies that user is able to insert data in the table successfully</doc>
+<status status="FAIL" start="2024-01-18T23:42:17.011160" elapsed="0.003238">No keyword with name 'Execute SQL Script' found.</status>
+</test>
+<test id="s1-s1-s1-t3" name="Verify Data Update in Table" line="24">
+<kw name="Execute SQL String">
+<msg time="2024-01-18T23:42:17.017855" level="FAIL">No keyword with name 'Execute SQL String' found.</msg>
+<var>${output}</var>
+<arg>UPDATE Persons SET FirstName = "Kevin" WHERE City="Vantaa";</arg>
+<status status="FAIL" start="2024-01-18T23:42:17.016853" elapsed="0.001002">No keyword with name 'Execute SQL String' found.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:17.017855" elapsed="0.000000"/>
+</kw>
+<doc>This test case verifies a user can Update a Table record</doc>
+<status status="FAIL" start="2024-01-18T23:42:17.014398" elapsed="0.003457">No keyword with name 'Execute SQL String' found.</status>
+</test>
+<test id="s1-s1-s1-t4" name="Verify a certain record is present or Not" line="29">
+<kw name="Check If Exists In Database">
+<msg time="2024-01-18T23:42:17.021448" level="FAIL">No keyword with name 'Check If Exists In Database' found.</msg>
+<arg>SELECT PersonID FROM Persons WHERE FirstName="Dwight"</arg>
+<status status="FAIL" start="2024-01-18T23:42:17.021448" elapsed="0.000000">No keyword with name 'Check If Exists In Database' found.</status>
+</kw>
+<doc>This test case verifies that in Persons Table we have the data for Dwight</doc>
+<status status="FAIL" start="2024-01-18T23:42:17.017855" elapsed="0.004718">No keyword with name 'Check If Exists In Database' found.</status>
+</test>
+<test id="s1-s1-s1-t5" name="Verify a Table is present or Not" line="33">
+<kw name="Table Must Exist">
+<msg time="2024-01-18T23:42:17.027565" level="FAIL">No keyword with name 'Table Must Exist' found.</msg>
+<arg>Persons</arg>
+<status status="FAIL" start="2024-01-18T23:42:17.027565" elapsed="0.000000">No keyword with name 'Table Must Exist' found.</status>
+</kw>
+<doc>This test case verifies whether Persons table exist in the database or not</doc>
+<status status="FAIL" start="2024-01-18T23:42:17.022573" elapsed="0.004992">No keyword with name 'Table Must Exist' found.</status>
+</test>
+<test id="s1-s1-s1-t6" name="Verify that the row count is 1" line="37">
+<kw name="Row Count Is Equal To X">
+<msg time="2024-01-18T23:42:17.032929" level="FAIL">No keyword with name 'Row Count Is Equal To X' found.</msg>
+<arg>SELECT PersonID FROM Persons WHERE CITY="Espoo"</arg>
+<arg>1</arg>
+<status status="FAIL" start="2024-01-18T23:42:17.032929" elapsed="0.000000">No keyword with name 'Row Count Is Equal To X' found.</status>
+</kw>
+<doc>This test case verifies that there is only one row in table where the city is Espoo</doc>
+<status status="FAIL" start="2024-01-18T23:42:17.028701" elapsed="0.004228">No keyword with name 'Row Count Is Equal To X' found.</status>
+</test>
+<test id="s1-s1-s1-t7" name="Verify that you can Delete a Table" line="41">
+<kw name="Execute SQL String">
+<msg time="2024-01-18T23:42:17.035930" level="FAIL">No keyword with name 'Execute SQL String' found.</msg>
+<var>${output}</var>
+<arg>DROP TABLE Persons;</arg>
+<status status="FAIL" start="2024-01-18T23:42:17.035930" elapsed="0.000000">No keyword with name 'Execute SQL String' found.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-01-18T23:42:17.035930" elapsed="0.000000"/>
+</kw>
+<kw name="Disconnect DB">
+<status status="NOT RUN" start="2024-01-18T23:42:17.035930" elapsed="0.000000"/>
+</kw>
+<doc>This test case verifies that a user can delete a Table</doc>
+<status status="FAIL" start="2024-01-18T23:42:17.032929" elapsed="0.003001">No keyword with name 'Execute SQL String' found.</status>
+</test>
+<doc>Database Testing in Robot Framework</doc>
+<status status="FAIL" start="2024-01-18T23:42:16.998630" elapsed="0.040167"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:16.996234" elapsed="0.043582"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:16.936353" elapsed="0.103463"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="7" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="7" skip="0" id="s1-s1" name="Login">TestCases.Login</stat>
+<stat pass="0" fail="7" skip="0" id="s1-s1-s1" name="DatabaseTest">TestCases.Login.DatabaseTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-18T23:42:16.873068" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\RegisterTC.robot' on line 12: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:16.877821" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot' on line 9: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 3: Non-existing setting 'Library SeleniumLibrary'.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 5: Non-existing setting 'Resource ../Resources/Login_resources.robot'.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 7: Non-existing setting 'Library DataDriver ../TestData/DDTXLS.xlsx encoding="ISO-8859-1"'.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 9: Non-existing setting 'Library String'.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 11: Non-existing setting 'Suite Setup Login_resources.Start TestCase'.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 13: Non-existing setting 'Suite Teardown Login_resources.Finish TestCase'.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 15: Non-existing setting 'Test Template Invalid login'.</msg>
+<msg time="2024-01-18T23:42:16.902072" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 3: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:16.904400" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 4: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:16.904400" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 5: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:16.904400" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 6: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:16.929582" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\Scripts\robot.exe
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\lib\site-packages</msg>
+<msg time="2024-01-18T23:42:17.000418" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\DatabaseTest.robot' on line 3: Importing library 'DatabaseLibrary' failed: ModuleNotFoundError: No module named 'DatabaseLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\Scripts\robot.exe
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\lib\site-packages</msg>
+</errors>
+</robot>

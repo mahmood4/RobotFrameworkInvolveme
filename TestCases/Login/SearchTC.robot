@@ -1,9 +1,9 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../../PageObjects/Search/SearchKW.robot
+#Resource  ../../PageObjects/Search/SearchKW.robot
 Resource  ../../PageObjects/Common/common.robot
 Resource  ../../PageObjects/LoginPage/LoginKW.robot
-Test Setup         common.Open My Browser
+Test Setup         Start    #common.Open My Browser
 Test Teardown      common.Close My Browser
 
 *** Test Case ***

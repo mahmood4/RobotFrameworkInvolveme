@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.5 on win32)" generated="2024-01-18T23:42:19.724534" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases">
+<suite id="s1-s1" name="Login" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login">
+<suite id="s1-s1-s1" name="LoginTC2" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\LoginTC2.robot">
+<test id="s1-s1-s1-t1" name="Test Deleteuser" line="12">
+<kw name="common.Open My Browser" type="SETUP">
+<msg time="2024-01-18T23:42:20.407328" level="FAIL">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</msg>
+<status status="FAIL" start="2024-01-18T23:42:20.407328" elapsed="0.000000">No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</kw>
+<kw name="Close My Browser" owner="common" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-18T23:42:22.423915" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-18T23:42:20.408336" elapsed="2.015579"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-01-18T23:42:22.423915" elapsed="0.000997"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:20.408336" elapsed="2.016576"/>
+</kw>
+<status status="FAIL" start="2024-01-18T23:42:20.399000" elapsed="2.025912">Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser</status>
+</test>
+<doc>Test Case Login</doc>
+<status status="FAIL" start="2024-01-18T23:42:19.779830" elapsed="2.645082"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:19.777526" elapsed="2.647386"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:19.734457" elapsed="2.690455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Login">TestCases.Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="LoginTC2">TestCases.Login.LoginTC2</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-18T23:42:19.680510" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\RegisterTC.robot' on line 12: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:19.683386" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot' on line 9: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:19.703471" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 3: Non-existing setting 'Library SeleniumLibrary'.</msg>
+<msg time="2024-01-18T23:42:19.703471" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 5: Non-existing setting 'Resource ../Resources/Login_resources.robot'.</msg>
+<msg time="2024-01-18T23:42:19.703471" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 7: Non-existing setting 'Library DataDriver ../TestData/DDTXLS.xlsx encoding="ISO-8859-1"'.</msg>
+<msg time="2024-01-18T23:42:19.703471" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 9: Non-existing setting 'Library String'.</msg>
+<msg time="2024-01-18T23:42:19.703471" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 11: Non-existing setting 'Suite Setup Login_resources.Start TestCase'.</msg>
+<msg time="2024-01-18T23:42:19.704412" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 13: Non-existing setting 'Suite Teardown Login_resources.Finish TestCase'.</msg>
+<msg time="2024-01-18T23:42:19.704412" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 15: Non-existing setting 'Test Template Invalid login'.</msg>
+<msg time="2024-01-18T23:42:19.705417" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 3: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:19.705417" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 4: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:19.705417" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 5: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:19.705417" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 6: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:19.726536" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\Scripts\robot.exe
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\lib\site-packages</msg>
+<msg time="2024-01-18T23:42:20.081246" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\common\common.robot' on line 70: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:20.082792" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\common\common.robot' on line 111: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:20.082792" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\common\common.robot' on line 116: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:20.082792" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\common\common.robot' on line 121: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:20.083797" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\common\common.robot' on line 138: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-01-18T23:42:20.083797" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\common\common.robot' on line 145: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

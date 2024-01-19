@@ -1,12 +1,18 @@
 #C:\Users\User\Downloads>json-server --watch db.json  - API Testing
 ####https://testersdock.com/shadow-dom-robot-framework/
+###############    pabot --processes 2 --argumentfile aa.txt  Workspaces/    to run parallel
+###PS C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestC                                   ases> pabot --processes 2 --argumentfile aa.txt  Workspaces/
 
+####cd C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Workspaces
+    #
+    #robot -i Create -v browser:firefox WorkspaceTC.robot
 *** Settings ***
 Library     SeleniumLibrary   15.0    5.0
-Library    OperatingSystem
-Library           highlight.py
-Variables   ../LoginPage/LoginUI.py
-Library           browser.py
+Library     OperatingSystem
+Library     highlight.py
+Variables    ../LoginPage/LoginUI.py
+Library     browser.py
+Library     SeleniumLibrary    run_on_failure=NOTHING
 Resource    ../LoginPage/LoginKW.robot
 
 *** Variables ***
@@ -16,15 +22,20 @@ ${URL}           https://www.involve.me/
 Start
 
     IF  "${browser}" == "chrome"
-        ${options}=  Evaluate        sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-        Log To Console                                 ${options}
-        Create WebDriver    Chrome      chrome_options=${options}
-        Go To          ${URL}
-    ELSE
+          #${options}=  Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+          #Log To Console                                 ${options}
+          #Create WebDriver    Chrome      chrome_options=${options}
+          ${driver_path}=    get_chromedriver_path
+          Open Browser     ${URL}   chrome   executable_path=${driver_path}
+
+          Go To          ${URL}
+    ELSE IF   "${browser}" == "firefox"
         # Start_Firefox
         ${driver_path}=    disable_download_dialog
         Open Browser     ${URL}    firefox    executable_path=${driver_path}
-
+    ELSE
+        ${driver_path}=    disable_download_dialog
+        Open Browser     ${URL}    firefox    executable_path=${driver_path}
     END
 
    # Go To          ${URL}
@@ -34,6 +45,22 @@ Start
     #${SCREEN_TEXTS}  Read Json    ../../TestData/Involve_Test.json
     ${SCREEN_TEXTS}  Read Json     C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json
     Set Global Variable    ${SCREEN_TEXTS}
+
+Startee
+   # ${options}=  Evaluate        sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+   # Log To Console                                 ${options}
+   # Create WebDriver    Chrome      chrome_options=${options}
+    Open Browser     ${URL}
+    Go To          ${URL}
+    ${handles}=  Get Window Handles
+    Maximize Browser Window
+    Verify Current URL
+    #${SCREEN_TEXTS}  Read Json    ../../TestData/Involve_Test.json
+    ${SCREEN_TEXTS}  Read Json     C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json
+    Set Global Variable    ${SCREEN_TEXTS}
+
+
+
 
 Read Json
     [Documentation]    The function, with its' own keyword reads the json files.
@@ -76,7 +103,7 @@ Login Successful
     [Arguments]                         ${emailInput}   ${passwordInput}
     LoginKW.Enter Email                 ${emailInput}
     LoginKW.Enter Password              ${passwordInput}
-    LoginKW.Click On Button Login
+    LoginKW.Click Cookie
 
 Verify Current URL
     ${curURL}=                          Get Location
@@ -115,13 +142,14 @@ Get elements
   [Arguments]                         ${element}
    @{workspaces}=   Get WebElements   ${element}
  #   log to console  @{workspaces}
-    [Return]    @{workspaces}
+    [RETURN]    @{workspaces}
 
 Login to the Application
-
-    wait until page contains element     ${CLICK_COOKIE}
-    Click Cookie
+#    wait until page contains element     ${CLICK_COOKIE}
+ #   Click Cookie
     Click On Link Login
     Enter Email                          sabree4u2@gmail.com
     Enter Password                       Nausheen4Only
     Click On Sign in button
+
+

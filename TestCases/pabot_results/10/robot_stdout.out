@@ -1,0 +1,26 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Rerun                                                               
+==============================================================================
+TestCases.Rerun.RerunFailedTests :: Tests to login to Login Page              
+==============================================================================
+Validate Unsuccessful Login using invalid credentials                 | PASS |
+------------------------------------------------------------------------------
+Validate Unsuccessful Login for blank username                        | PASS |
+------------------------------------------------------------------------------
+Validate Unsuccessful Login for blank password                        | FAIL |
+The text of element 'xpath://*[@class='oxd-form']/div[2]/div/span' should have been 'Required!' but it was 'Required'.
+------------------------------------------------------------------------------
+Validate successful Login                                             | PASS |
+------------------------------------------------------------------------------
+TestCases.Rerun.RerunFailedTests :: Tests to login to Login Page      | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+TestCases.Rerun                                                       | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+Output:  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\pabot_results\10\output.xml

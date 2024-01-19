@@ -1,0 +1,22 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Login                                                               
+==============================================================================
+TestCases.Login.LoginTC2 :: Test Case Login                                   
+==============================================================================
+Test Deleteuser                                                       | FAIL |
+Setup failed:
+No keyword with name 'common.Open My Browser' found. Did you mean:
+    common.Close My Browser
+------------------------------------------------------------------------------
+TestCases.Login.LoginTC2 :: Test Case Login                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Login                                                       | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\pabot_results\7\output.xml

@@ -1,1 +1,23 @@
-1684668792820	geckodriver	INFO	Listening on 127.0.0.1:58167
+1705629418485	geckodriver	INFO	Listening on 127.0.0.1:62027
+1705629421536	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62028" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileYYkXzP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1705629421938	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1705629422044	Marionette	INFO	Listening on port 62035
+Read port: 62035
+WebDriver BiDi listening on ws://127.0.0.1:62028
+1705629422164	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: Failed to initialize GPU process
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+DevTools listening on ws://127.0.0.1:62028/devtools/browser/e5a4060c-b13c-4798-a813-cb7e2288bc7d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+1705629435405	Marionette	INFO	Stopped listening on port 62035
+JavaScript warning: https://cdn.ivlv.me/ebcd346e-73c7-42c0-b597-e99086bd4111/js/vue-participant.js, line 2: Script terminated by timeout at:
+r@https://cdn.ivlv.me/ebcd346e-73c7-42c0-b597-e99086bd4111/js/vue-participant.js:2:385894
+
+Dynamically enable window occlusion 1

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.5 on win32)" generated="2024-01-18T23:42:24.036021" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases">
+<suite id="s1-s1" name="Rerun" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Rerun">
+<suite id="s1-s1-s1" name="RerunFailedTests" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Rerun\RerunFailedTests.robot">
+<test id="s1-s1-s1-t1" name="Validate Unsuccessful Login using invalid credentials" line="23">
+<kw name="Open the Browser with URL">
+<kw name="Get Chromedriver Path" owner="browser">
+<msg time="2024-01-18T23:42:24.591213" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-01-18T23:42:32.200049" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:42:32.304057" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:42:32.398440" level="INFO">Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg time="2024-01-18T23:42:32.398440" level="INFO">Chrome path C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<msg time="2024-01-18T23:42:32.401729" level="INFO">${driver_path} = C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<var>${driver_path}</var>
+<status status="PASS" start="2024-01-18T23:42:24.591213" elapsed="7.810516"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:32.402731" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:42:32.401729" elapsed="2.177309"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:34.580096" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:42:34.580096" elapsed="3.132190"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-18T23:42:37.713286" elapsed="0.128205"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-18T23:42:37.842487" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:24.591213" elapsed="13.251274"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:37.842487" level="INFO">Typing text 'Admin' into text field 'css:input[name=username]'.</msg>
+<arg>css:input[name=username]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:42:37.842487" elapsed="0.732579"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:38.576649" level="INFO">Typing password into text field 'css:input[name=password]'.</msg>
+<msg time="2024-01-18T23:42:38.651159" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:input[name=password]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:42:38.575648" elapsed="0.256118"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:38.832766" level="INFO">Clicking button 'css:.orangehrm-login-button'.</msg>
+<arg>css:.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:42:38.832766" elapsed="1.080590"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${invalid_password}</arg>
+<status status="PASS" start="2024-01-18T23:42:37.842487" elapsed="2.070869"/>
+</kw>
+<kw name="Verify the error message is correct">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:39.916470" level="INFO">Verifying element 'css:.oxd-alert-content--error' contains exact text 'Invalid credentials'.</msg>
+<arg>${login_error_message}</arg>
+<arg>Invalid credentials</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-01-18T23:42:39.915452" elapsed="0.392877"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:39.914451" elapsed="0.394880"/>
+</kw>
+<kw name="Close Browser Session">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-18T23:42:40.309331" elapsed="2.239333"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:40.309331" elapsed="2.239333"/>
+</kw>
+<tag>SMOKE</tag>
+<status status="PASS" start="2024-01-18T23:42:24.591213" elapsed="17.958454"/>
+</test>
+<test id="s1-s1-s1-t2" name="Validate Unsuccessful Login for blank username" line="30">
+<kw name="Open the Browser with URL">
+<kw name="Get Chromedriver Path" owner="browser">
+<msg time="2024-01-18T23:42:42.549667" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-01-18T23:42:48.470191" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:42:48.577086" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:42:48.702713" level="INFO">Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg time="2024-01-18T23:42:48.702713" level="INFO">Chrome path C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<msg time="2024-01-18T23:42:48.702713" level="INFO">${driver_path} = C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<var>${driver_path}</var>
+<status status="PASS" start="2024-01-18T23:42:42.549667" elapsed="6.153046"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:48.702713" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:42:48.702713" elapsed="4.972405"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:53.676106" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:42:53.676106" elapsed="0.422134"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-18T23:42:54.098240" elapsed="0.116997"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-18T23:42:54.215237" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:42.549667" elapsed="11.666570"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:54.216237" level="INFO">Typing text '' into text field 'css:input[name=username]'.</msg>
+<arg>css:input[name=username]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:42:54.216237" elapsed="0.833242"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:55.049479" level="INFO">Typing password into text field 'css:input[name=password]'.</msg>
+<msg time="2024-01-18T23:42:55.104460" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:input[name=password]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:42:55.049479" elapsed="0.172894"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:55.223371" level="INFO">Clicking button 'css:.orangehrm-login-button'.</msg>
+<arg>css:.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:42:55.222373" elapsed="0.148416"/>
+</kw>
+<arg>${blank_username}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2024-01-18T23:42:54.216237" elapsed="1.155551"/>
+</kw>
+<kw name="Verify the error message is displayed for username">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:42:55.371788" level="INFO">Verifying element 'xpath://*[@class='oxd-form']/div[1]/div/span' contains exact text 'Required'.</msg>
+<arg>${missing_username_error_message}</arg>
+<arg>Required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-01-18T23:42:55.371788" elapsed="0.041987"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:55.371788" elapsed="0.041987"/>
+</kw>
+<kw name="Close Browser Session">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-18T23:42:55.413775" elapsed="2.190352"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:55.413775" elapsed="2.190352"/>
+</kw>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2024-01-18T23:42:42.549667" elapsed="15.055496"/>
+</test>
+<test id="s1-s1-s1-t3" name="Validate Unsuccessful Login for blank password" line="37">
+<kw name="Open the Browser with URL">
+<kw name="Get Chromedriver Path" owner="browser">
+<msg time="2024-01-18T23:42:57.605163" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-01-18T23:43:02.900282" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:43:03.017253" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:43:03.151828" level="INFO">Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg time="2024-01-18T23:43:03.151828" level="INFO">Chrome path C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<msg time="2024-01-18T23:43:03.151828" level="INFO">${driver_path} = C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<var>${driver_path}</var>
+<status status="PASS" start="2024-01-18T23:42:57.605163" elapsed="5.546665"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:03.151828" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:43:03.151828" elapsed="7.510770"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:10.664557" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:43:10.663796" elapsed="0.573720"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-18T23:43:11.237516" elapsed="0.151001"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-18T23:43:11.388517" elapsed="0.009794"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:42:57.605163" elapsed="13.794474"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:11.405621" level="INFO">Typing text 'Admin' into text field 'css:input[name=username]'.</msg>
+<arg>css:input[name=username]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:43:11.405621" elapsed="0.658486"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:12.065109" level="INFO">Typing password into text field 'css:input[name=password]'.</msg>
+<msg time="2024-01-18T23:43:12.122469" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:input[name=password]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:43:12.065109" elapsed="0.133632"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:12.198741" level="INFO">Clicking button 'css:.orangehrm-login-button'.</msg>
+<arg>css:.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:43:12.198741" elapsed="0.155055"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${blank_password}</arg>
+<status status="PASS" start="2024-01-18T23:43:11.403159" elapsed="0.950637"/>
+</kw>
+<kw name="Verify the error message is displayed for password">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:12.354798" level="INFO">Verifying element 'xpath://*[@class='oxd-form']/div[2]/div/span' contains exact text 'Required!'.</msg>
+<msg time="2024-01-18T23:43:12.660919" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-18T23:43:12.661921" level="FAIL">The text of element 'xpath://*[@class='oxd-form']/div[2]/div/span' should have been 'Required!' but it was 'Required'.</msg>
+<arg>${missing_password_error_message}</arg>
+<arg>Required!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2024-01-18T23:43:12.354798" elapsed="0.309950">The text of element 'xpath://*[@class='oxd-form']/div[2]/div/span' should have been 'Required!' but it was 'Required'.</status>
+</kw>
+<status status="FAIL" start="2024-01-18T23:43:12.353796" elapsed="0.311953">The text of element 'xpath://*[@class='oxd-form']/div[2]/div/span' should have been 'Required!' but it was 'Required'.</status>
+</kw>
+<kw name="Close Browser Session">
+<status status="NOT RUN" start="2024-01-18T23:43:12.665749" elapsed="0.000000"/>
+</kw>
+<tag>REGRESSION</tag>
+<tag>SMOKE</tag>
+<status status="FAIL" start="2024-01-18T23:42:57.605163" elapsed="15.062236">The text of element 'xpath://*[@class='oxd-form']/div[2]/div/span' should have been 'Required!' but it was 'Required'.</status>
+</test>
+<test id="s1-s1-s1-t4" name="Validate successful Login" line="44">
+<kw name="Open the Browser with URL">
+<kw name="Get Chromedriver Path" owner="browser">
+<msg time="2024-01-18T23:43:12.669400" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-01-18T23:43:17.654889" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:43:17.765160" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-01-18T23:43:17.873895" level="INFO">Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg time="2024-01-18T23:43:17.873895" level="INFO">Chrome path C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<msg time="2024-01-18T23:43:17.873895" level="INFO">${driver_path} = C:\Users\User\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe</msg>
+<var>${driver_path}</var>
+<status status="PASS" start="2024-01-18T23:43:12.669400" elapsed="5.204495"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:17.873895" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:43:17.873895" elapsed="7.549228"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:25.424681" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-18T23:43:25.423678" elapsed="0.500871"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-18T23:43:25.924549" elapsed="0.114267"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-01-18T23:43:26.039907" elapsed="0.003264"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:43:12.668405" elapsed="13.375814"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:26.046631" level="INFO">Typing text 'Admin' into text field 'css:input[name=username]'.</msg>
+<arg>css:input[name=username]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:43:26.045629" elapsed="0.863573"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:26.910202" level="INFO">Typing password into text field 'css:input[name=password]'.</msg>
+<msg time="2024-01-18T23:43:26.989956" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:input[name=password]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:43:26.909202" elapsed="0.300377"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:27.211249" level="INFO">Clicking button 'css:.orangehrm-login-button'.</msg>
+<arg>css:.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-18T23:43:27.210579" elapsed="0.150979"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2024-01-18T23:43:26.044219" elapsed="1.317339"/>
+</kw>
+<kw name="Verify Dashboard page opens">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-01-18T23:43:27.364234" level="INFO">Verifying element 'css:.oxd-topbar-header-breadcrumb-module' contains exact text 'Dashboard'.</msg>
+<arg>${dashboard_title}</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-01-18T23:43:27.363234" elapsed="1.554734"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:43:27.362236" elapsed="1.555732"/>
+</kw>
+<kw name="Close Browser Session">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-18T23:43:28.918967" elapsed="3.360324"/>
+</kw>
+<status status="PASS" start="2024-01-18T23:43:28.917968" elapsed="3.362345"/>
+</kw>
+<tag>UAT</tag>
+<status status="PASS" start="2024-01-18T23:43:12.667399" elapsed="19.612914"/>
+</test>
+<doc>Tests to login to Login Page</doc>
+<status status="FAIL" start="2024-01-18T23:42:24.082923" elapsed="68.197390"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:24.081092" elapsed="68.199221"/>
+</suite>
+<status status="FAIL" start="2024-01-18T23:42:24.044114" elapsed="68.236199"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">REGRESSION</stat>
+<stat pass="1" fail="1" skip="0">SMOKE</stat>
+<stat pass="1" fail="0" skip="0">UAT</stat>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="3" fail="1" skip="0" id="s1-s1" name="Rerun">TestCases.Rerun</stat>
+<stat pass="3" fail="1" skip="0" id="s1-s1-s1" name="RerunFailedTests">TestCases.Rerun.RerunFailedTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-18T23:42:23.980077" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\RegisterTC.robot' on line 12: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:23.984943" level="WARN">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot' on line 9: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+<msg time="2024-01-18T23:42:24.013011" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 3: Non-existing setting 'Library SeleniumLibrary'.</msg>
+<msg time="2024-01-18T23:42:24.014012" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 5: Non-existing setting 'Resource ../Resources/Login_resources.robot'.</msg>
+<msg time="2024-01-18T23:42:24.014012" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 7: Non-existing setting 'Library DataDriver ../TestData/DDTXLS.xlsx encoding="ISO-8859-1"'.</msg>
+<msg time="2024-01-18T23:42:24.014012" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 9: Non-existing setting 'Library String'.</msg>
+<msg time="2024-01-18T23:42:24.014012" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 11: Non-existing setting 'Suite Setup Login_resources.Start TestCase'.</msg>
+<msg time="2024-01-18T23:42:24.014012" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 13: Non-existing setting 'Suite Teardown Login_resources.Finish TestCase'.</msg>
+<msg time="2024-01-18T23:42:24.014012" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 15: Non-existing setting 'Test Template Invalid login'.</msg>
+<msg time="2024-01-18T23:42:24.015122" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 3: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:24.015122" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 4: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:24.015122" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 5: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:24.015122" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 6: Non-existing setting ''.</msg>
+<msg time="2024-01-18T23:42:24.038420" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\Scripts\robot.exe
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\lib\site-packages</msg>
+</errors>
+</robot>

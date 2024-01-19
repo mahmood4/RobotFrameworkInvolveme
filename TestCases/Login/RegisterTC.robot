@@ -3,7 +3,7 @@ Library   SeleniumLibrary
 Resource            ../../PageObjects/LoginPage/LoginKW.robot
 Resource            ../../PageObjects/Register/RegisterKW.robot
 Resource            ../../PageObjects/Common/common.robot
-Test Setup         common.Open My Browser
+Test Setup         Start    #common.Open My Browser
 Test Teardown      common.Close My Browser
 
 
@@ -12,7 +12,7 @@ Test Teardown      common.Close My Browser
 *** Test Case ***
 TC1
     [Documentation]     Register a New User with the email ID.
-    Click On Link Signup / Login
+    Click On Link Login
     Enter Name                          Hello
     Enter Email Address                 hello1232@gmail.com
     Click SignUp Button
@@ -32,7 +32,7 @@ TC1
 
 TC2
     [Documentation]     Register a Existing User with the email ID.
-    Click On Link Signup / Login
+    Click On Link Login
    # Click On Button Login
  #   [Arguments]                         ${NameInput}       ${EmailAddressInput}
     Enter Name                          Hello

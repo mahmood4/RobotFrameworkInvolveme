@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Keyword Login page Ecommerces Anhtester
 Library             SeleniumLibrary
-Variables           LoginUI.py
+Variables            LoginUI.py
 Resource            ../common/common.robot
 
 *** Keywords ***

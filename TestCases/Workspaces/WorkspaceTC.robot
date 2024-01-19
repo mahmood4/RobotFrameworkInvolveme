@@ -4,8 +4,8 @@ Library             SeleniumLibrary
 Resource            ../../PageObjects/LoginPage/LoginKW.robot
 Resource            ../../PageObjects/Workspaces/WorkspaceKW.robot
 Resource            ../../PageObjects/Common/common.robot
-Test Setup        Start  # Suitw Setup will run only once
-Test Teardown      common.Close My Browser
+Test Setup       common.Start  # Suitw Setup will run only once
+Test Teardown    common.Close My Browser
 
 ####robot -i Create -v browser:firefox WorkspaceTC.robot
 
@@ -57,13 +57,13 @@ Test Teardown      common.Close My Browser
     Search an Non-Existing Project   Hello
 
 
-08 Cancel project deletion
-    [Tags]  SanityC
+08 Cancel Project deletion
+    [Tags]  CancelProjDel
     Login to the Application
     Cancel a project deletion   Cancel
 
 
 09 project deletion
-    [Tags]  SanityD
+    [Tags]  ProjectDeletion
     Login to the Application
     Cancel a project deletion   Delete

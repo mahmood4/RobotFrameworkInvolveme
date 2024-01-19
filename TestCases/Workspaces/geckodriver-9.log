@@ -1,22 +1,31 @@
-1685640444955	geckodriver	INFO	Listening on 127.0.0.1:61995
-1685640448011	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61996" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilepqHTIV"
+1705632627938	geckodriver	INFO	Listening on 127.0.0.1:63022
+1705632631104	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63023" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilexJXtwW"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1685640448709	Marionette	INFO	Marionette enabled
+1705632631884	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
-1685640448723	Marionette	INFO	Listening on port 62004
-Read port: 62004
-WebDriver BiDi listening on ws://127.0.0.1:61996
-1685640449038	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1705632632061	Marionette	INFO	Listening on port 63030
+WebDriver BiDi listening on ws://127.0.0.1:63023
+Read port: 63030
+1705632632200	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 [GFX1-]: Fallback WR to SW-WR + D3D11
 [GFX1-]: Failed to initialize GPU process
 [GFX1-]: [D3D11] failed to get compositor device.
 [GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\WINDOWS\\TEMP\\rust_mozprofilepqHTIV\\search.json.mozlz4", (void 0)))
-[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
-DevTools listening on ws://127.0.0.1:61996/devtools/browser/832b7e81-a814-44b6-9833-12e22547f872
+DevTools listening on ws://127.0.0.1:63023/devtools/browser/3d94736a-dbac-4667-a205-7845f6e26a27
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
-1685640471060	Marionette	INFO	Stopped listening on port 62004
+JavaScript warning: https://accounts.google.com/gsi/button?text=signin_with&size=large&width=384&theme=outline&logo_alignment=center&client_id=222183658028-bhd2q05n0e8jt5p4gipda078oqjosbgm.apps.googleusercontent.com&iframe_id=gsi_640369_131680&as=W%2BgHtPcHi0GyrNcp8msiOA, line 131: Script terminated by timeout at:
+_.N@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:131:25
+Xi@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:201:286
+Si@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:202:246
+Vi@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:199:318
+Ui@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:199:22
+Oi.prototype.H@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:198:130
+Oi/<@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:192:311
+nc@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:62:102
+b@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQr/d=1/rs=AF0KOtVZXNjR31Iz4HPWJCXldAm88_GIpg/m=credential_button_library:59:473
+
+1705632649326	Marionette	INFO	Stopped listening on port 63030
 Dynamically enable window occlusion 1

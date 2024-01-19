@@ -5,6 +5,7 @@
 Documentation       Keyword Login page Ecommerces Anhtester
 Library             SeleniumLibrary
 Library             String
+Library             DateTime
 Variables           WorkspaceUI.py
 Resource            ../common/common.robot
 
@@ -24,7 +25,12 @@ create_workspace
      sleep  1s
      log to console        ${before}
      sleep  1s
-     common.Input For Text            ${NEW_WORKSPACE_NAME_FIELD}         ${nameC}
+     ${date}=  Get Current Date    UTC      exclude_millis=yes
+#      ${plus14}=  Add Time To Date      ${date}      14 days
+      #${future}   Convert Date      ${date}      result_format=%a %B %d %H:%M:%S UTC %Y
+     ${future}   Convert Date      ${date}      result_format=%H_%M
+     Log      ${future}      console=yes
+     common.Input For Text            ${NEW_WORKSPACE_NAME_FIELD}         ${nameC}${future}
      common.Click For Element         ${CONFIRMATION_BUTTON}
      sleep  2s
      ${after}=    Get Count of Elements    ${WORKSPACE_LIST}
@@ -157,6 +163,9 @@ Cancel a project deletion
        ${text}=    Get Text    ${element}
        sleep  1s
        common.Click For Element       ${DROP_DOWN_BUTTON}
+       wait until page contains element    ${RATING}
+       common.Click For Element       ${RATING}
+
        IF  "${text} == 'test'"
              common.Click For Element       ${DELETE_PROJECT_BUTTON}
              Exit For Loop

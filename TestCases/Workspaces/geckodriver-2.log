@@ -1,1 +1,20 @@
-1684664476777	geckodriver	INFO	Listening on 127.0.0.1:57597
+1705629299269	geckodriver	INFO	Listening on 127.0.0.1:61891
+1705629302600	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61892" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileBTUVIi"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1705629303216	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1705629303355	Marionette	INFO	Listening on port 61899
+WebDriver BiDi listening on ws://127.0.0.1:61892
+Read port: 61899
+1705629303721	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: Failed to initialize GPU process
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+DevTools listening on ws://127.0.0.1:61892/devtools/browser/83bd343b-57a2-42bb-8b79-bd6d87aa33de
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
+1705629318741	Marionette	INFO	Stopped listening on port 61899
+Dynamically enable window occlusion 1

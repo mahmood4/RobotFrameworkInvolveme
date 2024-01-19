@@ -1,0 +1,19 @@
+datasources:56d21e27044289c60c35aa3f40567e55170db85b
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:79845b35dc4e5d23016ec6cec1600e26dee1e3f3
+--suite Testing.LoginTC
+--suite Testing.LoginTC1
+--suite TestCases.ForgotPassword.ForgotPassword
+--suite TestCases.Login.ContactTC
+--suite TestCases.Login.DatabaseTest
+--suite TestCases.Login.LoginTC
+--suite TestCases.Login.LoginTC1
+--suite TestCases.Login.LoginTC2
+--suite TestCases.Login.RegisterTC
+--suite TestCases.Login.SearchTC
+--suite TestCases.Rerun.RerunFailedTests
+--suite TestCases.Robot Reports.Test1
+--suite TestCases.Testing.TimeTC
+--suite TestCases.Workspaces.Demo
+--suite TestCases.Workspaces.WorkspaceTC

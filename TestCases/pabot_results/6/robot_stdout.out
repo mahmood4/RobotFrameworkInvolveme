@@ -1,0 +1,21 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Login                                                               
+==============================================================================
+TestCases.Login.LoginTC1 :: Test Case Login                                   
+==============================================================================
+Test Login                                                            | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.
+------------------------------------------------------------------------------
+TestCases.Login.LoginTC1 :: Test Case Login                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Login                                                       | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\pabot_results\6\output.xml

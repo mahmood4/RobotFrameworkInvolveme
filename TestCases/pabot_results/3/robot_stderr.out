@@ -1,0 +1,31 @@
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\RegisterTC.robot' on line 12: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\SearchTC.robot' on line 9: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 3: Non-existing setting 'Library SeleniumLibrary'.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 5: Non-existing setting 'Resource ../Resources/Login_resources.robot'.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 7: Non-existing setting 'Library DataDriver ../TestData/DDTXLS.xlsx encoding="ISO-8859-1"'.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 9: Non-existing setting 'Library String'.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 11: Non-existing setting 'Suite Setup Login_resources.Start TestCase'.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 13: Non-existing setting 'Suite Teardown Login_resources.Finish TestCase'.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\stack1.robot' on line 15: Non-existing setting 'Test Template Invalid login'.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 3: Non-existing setting ''.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 4: Non-existing setting ''.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 5: Non-existing setting ''.
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Testing\test111.robot' on line 6: Non-existing setting ''.
+[ ERROR ] Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\Scripts\robot.exe
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\python38.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python38-32
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv
+  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\lib\site-packages
+[ ERROR ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\ContactTC.robot' on line 4: Resource file '..\..\PageObjects\ContactUS\ContactKW.robot' does not exist.
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 70: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 111: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 116: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 121: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 138: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.
+[ WARN ] Error in file 'C:\Users\User\PycharmProjects\InvolvemeRobotFramework\PageObjects\Common\common.robot' on line 145: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.

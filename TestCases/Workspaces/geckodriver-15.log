@@ -1,108 +1,114 @@
-1685646776393	geckodriver	INFO	Listening on 127.0.0.1:62828
-1685646779480	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62829" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileYWPHsD"
+1705629060319	geckodriver	INFO	Listening on 127.0.0.1:61569
+1705629063530	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61570" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilehOHx0l"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1685646780024	Marionette	INFO	Marionette enabled
+1705629065391	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
-1685646780034	Marionette	INFO	Listening on port 62836
-Read port: 62836
-WebDriver BiDi listening on ws://127.0.0.1:62829
-1685646780248	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileYWPHsD\\search.json.mozlz4", (void 0)))
-[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
-DevTools listening on ws://127.0.0.1:62829/devtools/browser/d2ece214-d9d9-452b-a860-567520e0a838
+1705629065521	Marionette	INFO	Listening on port 61577
+WebDriver BiDi listening on ws://127.0.0.1:61570
+Read port: 61577
+1705629065652	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: Failed to initialize GPU process
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+DevTools listening on ws://127.0.0.1:61570/devtools/browser/6a110f4a-a244-4ae7-adc9-e2056ca6dbd3
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://app.involve.me."
-1685646799226	Marionette	INFO	Stopped listening on port 62836
+1705629079213	Marionette	INFO	Stopped listening on port 61577
+JavaScript warning: https://accounts.google.com/gsi/button?text=signin_with&size=large&width=384&theme=outline&logo_alignment=center&client_id=222183658028-bhd2q05n0e8jt5p4gipda078oqjosbgm.apps.googleusercontent.com&iframe_id=gsi_73057_512699&as=VlVj8SrxqpGzbb%2FtDaWNlw, line 130: Script terminated by timeout at:
+_.I<@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:130:1218
+_.Zd@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:101:37
+_.N@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:131:117
+Wi@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:201:3
+Yi@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:201:68
+Si@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:201:306
+Vi@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:198:318
+Ui@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:198:22
+Oi.prototype.H@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:197:130
+Oi/<@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:191:311
+nc@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:62:102
+b@/_/gsi/_/js/k=gsi.gsi.en_US.MDRYrNPNVW8.O/am=ABQq/d=1/rs=AF0KOtVQq4IjoxevCnnpdu5OmEmnPlsxNQ/m=credential_button_library:59:473
+
 Dynamically enable window occlusion 1
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
-_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
-setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
-setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
-setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:824:36
-observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"ContentParent: id=2061844af00","state":{"remoteTypePrefix":"webIsolated"},"filename":"/builds/worker/checkouts/gecko/dom/ipc/ContentParent.cpp","lineNumber":3910,"stack":""}] Barrier: profile-before-change
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c, line 207: Script terminated by timeout at:
+gd.prototype.get@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1590
+f@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:2668
+f@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:2779
+nd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:208:340
+wd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:217:9
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+H@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1440
+xd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:219:92
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+db@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:375
+Sd/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:226:384
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+H@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1440
+Bd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:219:472
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+H@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1440
+Ad@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:219:317
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+H@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1440
+re@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:230:122
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+db@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:375
+Sd/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:226:384
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+H@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1440
+Bd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:219:472
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+db@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:375
+yd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:219:158
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+db@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:375
+Id@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:221:73
+Nd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:224:137
+Pd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:223:73
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+db@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:375
+yd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:219:158
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+db@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:375
+Zd@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:227:325
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+eb@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:576
+db@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:191:375
+Sd/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:226:384
+ed.prototype.invoke@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:207:1181
+bH/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:607:693
+Wo@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:399:231
+aa.Rm@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:595:198
+aa.Qm/</<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:581:118
+Sj@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:323:137
+fk@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:326:350
+aa.Qm/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:581:104
+c@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:432:169
+ks@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:433:269
+aa.Qm@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:581:90
+c@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:600:678
+Zp@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:404:298
+Yp.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:407:266
+Yp.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:405:207
+Rp@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:402:789
+vG/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:601:178
+aa.Pk/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:551:126
+aa.Pk/c/<@https://www.googletagmanager.com/gtag/js?id=G-R2RGRWCNVR&l=dataLayer&cx=c:550:420
+o@https://cdn.ivlv.me/ebcd346e-73c7-42c0-b597-e99086bd4111/js/dashboard/app.js:2:75036
 
-console.error: "TelemetryScheduler.shutdown - Already shut down"
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
-_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
-setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
-setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
-setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:824:36
-observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
-_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
-setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
-setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
-setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:824:36
-observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  TelemetryController: shutting down
-          Phase: profile-before-change-telemetry
-          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
-_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
-setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
-setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
-setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:824:36
-observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
-
-WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
-addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
-_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
-setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
-setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
-setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:824:36
-observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
-
-JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
-JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.sys.mjs", 370))
+console.error: (new Error("places.sqlite#1: cannot execute operation Interactions.jsm::updateDatabase, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 517))

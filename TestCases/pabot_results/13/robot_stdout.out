@@ -1,0 +1,21 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Workspaces                                                          
+==============================================================================
+TestCases.Workspaces.Demo :: Workspace                                        
+==============================================================================
+02 Delete Workspace                                                   | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.
+------------------------------------------------------------------------------
+TestCases.Workspaces.Demo :: Workspace                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Workspaces                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\pabot_results\13\output.xml

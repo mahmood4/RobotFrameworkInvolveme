@@ -1,0 +1,38 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Login                                                               
+==============================================================================
+TestCases.Login.DatabaseTest :: Database Testing in Robot Framework           
+==============================================================================
+Verify Successful creation of Table :: This test case verifies tha... | FAIL |
+No keyword with name 'Connect To Database' found.
+------------------------------------------------------------------------------
+Verify Data Insertion in Table :: This test case verifies that use... | FAIL |
+No keyword with name 'Execute SQL Script' found.
+------------------------------------------------------------------------------
+Verify Data Update in Table :: This test case verifies a user can ... | FAIL |
+No keyword with name 'Execute SQL String' found.
+------------------------------------------------------------------------------
+Verify a certain record is present or Not :: This test case verifi... | FAIL |
+No keyword with name 'Check If Exists In Database' found.
+------------------------------------------------------------------------------
+Verify a Table is present or Not :: This test case verifies whethe... | FAIL |
+No keyword with name 'Table Must Exist' found.
+------------------------------------------------------------------------------
+Verify that the row count is 1 :: This test case verifies that the... | FAIL |
+No keyword with name 'Row Count Is Equal To X' found.
+------------------------------------------------------------------------------
+Verify that you can Delete a Table :: This test case verifies that... | FAIL |
+No keyword with name 'Execute SQL String' found.
+------------------------------------------------------------------------------
+TestCases.Login.DatabaseTest :: Database Testing in Robot Framework   | FAIL |
+7 tests, 0 passed, 7 failed
+==============================================================================
+TestCases.Login                                                       | FAIL |
+7 tests, 0 passed, 7 failed
+==============================================================================
+TestCases                                                             | FAIL |
+7 tests, 0 passed, 7 failed
+==============================================================================
+Output:  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\pabot_results\4\output.xml

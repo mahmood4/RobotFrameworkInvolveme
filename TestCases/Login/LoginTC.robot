@@ -17,6 +17,7 @@ Test Login
     Is Text Displayed     ${SCREEN_TEXTS["ws_page_title"]}
 
 Test Login N Logout
+    [Tags]  Login
     sleep    1s
     Click Cookie
     Click On Link Login

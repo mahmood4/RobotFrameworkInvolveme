@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.5 on win32)" generated="20230923 22:51:08.049" rpa="false" schemaversion="3">
+<suite id="s1" name="LoginTC" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\Login\LoginTC.robot">
+<test id="s1-t1" name="Test Login" line="10">
+<kw name="Start" library="common" type="SETUP">
+<if>
+<branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<msg timestamp="20230923 22:51:08.648" level="FAIL">Evaluating IF condition failed: Variable '${browser}' not found.</msg>
+<status status="FAIL" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${browser}&quot; == &quot;&quot;">
+<kw name="Disable Download Dialog" library="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</branch>
+<branch type="ELSE">
+<kw name="Disable Download Dialog" library="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</branch>
+<status status="FAIL" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</if>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<status status="FAIL" starttime="20230923 22:51:08.648" endtime="20230923 22:51:08.648"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 22:51:10.673" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 22:51:08.656" endtime="20230923 22:51:10.673"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230923 22:51:10.674" endtime="20230923 22:51:10.674"/>
+</kw>
+<status status="PASS" starttime="20230923 22:51:08.655" endtime="20230923 22:51:10.675"/>
+</kw>
+<status status="FAIL" starttime="20230923 22:51:08.648" endtime="20230923 22:51:10.676">Setup failed:
+Evaluating IF condition failed: Variable '${browser}' not found.</status>
+</test>
+<test id="s1-t2" name="Test Login N Logout" line="19">
+<kw name="Start" library="common" type="SETUP">
+<if>
+<branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<msg timestamp="20230923 22:51:10.685" level="FAIL">Evaluating IF condition failed: Variable '${browser}' not found.</msg>
+<status status="FAIL" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${browser}&quot; == &quot;&quot;">
+<kw name="Disable Download Dialog" library="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</branch>
+<branch type="ELSE">
+<kw name="Disable Download Dialog" library="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</branch>
+<status status="FAIL" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</if>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:10.685" endtime="20230923 22:51:10.685"/>
+</kw>
+<status status="FAIL" starttime="20230923 22:51:10.684" endtime="20230923 22:51:10.685"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 22:51:12.707" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 22:51:10.702" endtime="20230923 22:51:12.707"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230923 22:51:12.707" endtime="20230923 22:51:12.707"/>
+</kw>
+<status status="PASS" starttime="20230923 22:51:10.702" endtime="20230923 22:51:12.707"/>
+</kw>
+<tag>Login</tag>
+<status status="FAIL" starttime="20230923 22:51:10.682" endtime="20230923 22:51:12.711">Setup failed:
+Evaluating IF condition failed: Variable '${browser}' not found.</status>
+</test>
+<test id="s1-t3" name="Test Invalid Login" line="31">
+<kw name="Start" library="common" type="SETUP">
+<if>
+<branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<msg timestamp="20230923 22:51:12.720" level="FAIL">Evaluating IF condition failed: Variable '${browser}' not found.</msg>
+<status status="FAIL" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${browser}&quot; == &quot;&quot;">
+<kw name="Disable Download Dialog" library="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</branch>
+<branch type="ELSE">
+<kw name="Disable Download Dialog" library="browser">
+<var>${driver_path}</var>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</branch>
+<status status="FAIL" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</if>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Verify Current URL" library="common">
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Read Json" library="common">
+<var>${SCREEN_TEXTS}</var>
+<arg>C:/Users/User/PycharmProjects/InvolvemeRobotFramework/TestData/Involve_Test.json</arg>
+<doc>The function, with its' own keyword reads the json files.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${SCREEN_TEXTS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230923 22:51:12.720" endtime="20230923 22:51:12.720"/>
+</kw>
+<status status="FAIL" starttime="20230923 22:51:12.719" endtime="20230923 22:51:12.720"/>
+</kw>
+<kw name="Close My Browser" library="common" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 22:51:14.749" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 22:51:12.736" endtime="20230923 22:51:14.749"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230923 22:51:14.750" endtime="20230923 22:51:14.750"/>
+</kw>
+<status status="PASS" starttime="20230923 22:51:12.735" endtime="20230923 22:51:14.750"/>
+</kw>
+<tag>InvalidL</tag>
+<status status="FAIL" starttime="20230923 22:51:12.717" endtime="20230923 22:51:14.752">Setup failed:
+Evaluating IF condition failed: Variable '${browser}' not found.</status>
+</test>
+<doc>Test Case Login</doc>
+<status status="FAIL" starttime="20230923 22:51:08.058" endtime="20230923 22:51:14.759"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">InvalidL</stat>
+<stat pass="0" fail="1" skip="0">Login</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="LoginTC">LoginTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

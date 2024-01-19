@@ -1,0 +1,25 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.ForgotPassword                                                      
+==============================================================================
+TestCases.ForgotPassword.ForgotPassword :: Test Case Login                    
+==============================================================================
+Valid EMail                                                           | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.
+------------------------------------------------------------------------------
+Invalid Email                                                         | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '"${browser}" == "chrome"' failed: Variable '${browser}' not found.
+------------------------------------------------------------------------------
+TestCases.ForgotPassword.ForgotPassword :: Test Case Login            | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestCases.ForgotPassword                                              | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\pabot_results\2\output.xml
