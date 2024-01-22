@@ -23,10 +23,9 @@ Test Teardown    common.Close My Browser
 
 
 03 Delete Workspace
-
     [Tags]  Delete
     Login to the Application
-    Delete workspace   test
+    Delete workspace   workspace
 
 04. Total number of Existing Projects
     [Tags]  Exist
@@ -67,3 +66,8 @@ Test Teardown    common.Close My Browser
     [Tags]  ProjectDeletion
     Login to the Application
     Cancel a project deletion   Delete
+
+10 Delete Allworkspace
+    [Tags]  AllDelete
+    Login to the Application
+    Delete Allworkspace

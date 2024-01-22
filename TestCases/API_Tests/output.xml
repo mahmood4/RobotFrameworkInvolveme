@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.5 on win32)" generated="2024-01-20T23:29:56.676771" rpa="false" schemaversion="5">
+<suite id="s1" name="API GO Rest" source="C:\Users\User\PycharmProjects\InvolvemeRobotFramework\TestCases\API_Tests\API_GO_Rest.robot">
+<test id="s1-t1" name="Quick Get Request Test" line="18">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-01-20T23:29:56.958020" level="INFO">Creating Session using : alias=mysession, url=http://gorest.co.in/public, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-01-20T23:29:56.958020" elapsed="0.015625"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-01-20T23:29:56.973645" level="INFO">${headers} = {'Authorization': 'Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6', 'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>Authorization=${auth_token}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-01-20T23:29:56.973645" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-01-20T23:29:57.899099" level="INFO">GET Request : url=http://gorest.co.in/public/v2/users/6007073 (redirected) 
+ path_url=/public/v2/users/6007073 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg time="2024-01-20T23:29:57.899099" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users/6007073 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 21 Jan 2024 04:29:56 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"7f4d02f14b506da076eb028653f00890"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-ratelimit-limit': '90', 'x-ratelimit-remaining': '89', 'x-ratelimit-reset': '1', 'x-request-id': 'e5f28c28-4e90-4330-b77c-71b22f30203b', 'x-runtime': '0.039422', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=17yna6X5mWDrwKuSZ%2FeTqu5bGh1647py4pdgS5JWYhd5J53AB5ky%2FfNsSFDSsm60xBJupgHmfNP8EsuYon%2BnqAReMwdpltVzr3TbMrp13o6vMwTtZEcLwbzQoAeiu33umR54Wk8l6q%2BMVnI%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '848cd1aa7f4d39d8-YYZ', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"id":6007073,"name":"Jaya Naik","email":"jaya_naik@tromp-treutel.test","gender":"male","status":"active"} 
+ </msg>
+<msg time="2024-01-20T23:29:57.899099" level="INFO">C:\Users\User\PycharmProjects\InvolvemeRobotFramework\venv\lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-01-20T23:29:57.899099" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>v2/users/6007073</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-01-20T23:29:56.973645" elapsed="0.925454"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-01-20T23:29:57.899099" level="INFO">${status_code} = 200</msg>
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-01-20T23:29:57.899099" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-20T23:29:57.914726" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-20T23:29:57.914726" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-01-20T23:29:57.914726" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-20T23:29:57.914726" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T23:29:56.958020" elapsed="0.956706"/>
+</test>
+<test id="s1-t2" name="Post Request Test" line="32">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-01-20T23:29:57.914726" level="INFO">&amp;{req_body} = { name=test | email=test111@gmail.com | gender=male | status=active }</msg>
+<var>&amp;{req_body}</var>
+<arg>name=test</arg>
+<arg>email=test111@gmail.com</arg>
+<arg>gender=male</arg>
+<arg>status=active</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-01-20T23:29:57.914726" elapsed="0.000000"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-01-20T23:29:58.915520" level="INFO">POST Request : url=http://gorest.co.in/public/v2/users (redirected) 
+ path_url=/public/v2/users 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '84', 'Content-Type': 'application/json'} 
+ body=b'{"name": "test", "email": "test111@gmail.com", "gender": "male", "status": "active"}' 
+ </msg>
+<msg time="2024-01-20T23:29:58.915520" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 21 Jan 2024 04:29:58 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"f345cb1d6cb9643e1d8fe49582cc4fa1"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '294', 'x-pagination-total': '2931', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': 'f0c43f8d-17b4-4e4d-b096-e22d4834f5a7', 'x-runtime': '0.050123', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=1Qe7oCIjt3Frvn22YCmlF1tLE8nRR1adGt8aazYiYZcvNJAosPFSvc%2F5OyTjBSMO5sdlJTyDzKeQp39tFLQ%2BDJCkZP4tn8Zh4xkZ%2Fyglwj0Ss1FoGf0%2Bm97x0MyfjvQRB2DcNcJzUke4tj8%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '848cd1b09c43a1da-YYZ', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":6007073,"name":"Jaya Naik","email":"jaya_naik@tromp-treutel.test","gender":"male","status":"active"},{"id":6007072,"name":"Ahalya Dhawan","email":"ahalya_dhawan@mann.test","gender":"male","status":"active"},{"id":6007071,"name":"Mahesh Gupta","email":"mahesh_gupta@barrows.test","gender":"female","status":"active"},{"id":6007070,"name":"Mani Dhawan","email":"mani_dhawan@feeney-leuschke.test","gender":"male","status":"inactive"},{"id":6007069,"name":"Gudakesha Jain","email":"jain_gudakesha@schmidt-lindgren.test","gender":"male","status":"active"},{"id":6007068,"name":"Rev. Chandra Desai","email":"rev_chandra_desai@harris.example","gender":"male","status":"inactive"},{"id":6007067,"name":"Achintya Patil V","email":"patil_v_achintya@nienow.test","gender":"female","status":"inactive"},{"id":6007066,"name":"Msgr. Udai Arora","email":"arora_msgr_udai@abernathy.example","gender":"male","status":"active"},{"id":6007065,"name":"Leela Abbott","email":"leela_abbott@bergstrom.example","gender":"male","status":"active"},{"id":6007064,"name":"Adhrit Talwar","email":"talwar_adhrit@cormier.test","gender":"female","status":"inactive"}] 
+ </msg>
+<msg time="2024-01-20T23:29:58.915520" level="FAIL">Url: https://gorest.co.in/public/v2/users Expected status: 200 != 201</msg>
+<var>${response1}</var>
+<arg>${base_url1}</arg>
+<arg>json=${req_body}</arg>
+<arg>expected_status=201</arg>
+<doc>Sends a POST request.</doc>
+<status status="FAIL" start="2024-01-20T23:29:57.914726" elapsed="1.000794">Url: https://gorest.co.in/public/v2/users Expected status: 200 != 201</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response1.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-01-20T23:29:58.915520" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response1.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-01-20T23:29:58.915520" elapsed="0.000000"/>
+</kw>
+<tag>postt</tag>
+<status status="FAIL" start="2024-01-20T23:29:57.914726" elapsed="1.000794">Url: https://gorest.co.in/public/v2/users Expected status: 200 != 201</status>
+</test>
+<status status="FAIL" start="2024-01-20T23:29:56.676771" elapsed="2.238749"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">postt</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="API GO Rest">API GO Rest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

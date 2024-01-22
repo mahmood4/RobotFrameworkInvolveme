@@ -53,9 +53,10 @@ Rename workspace
 Delete Demoworkspace
    sleep    2s
    @{my_list}=    Get Webelements    WORKSPACE_LIST
-   FOR    ${element}    IN    @{my_list}
-        log to console   ${element}
-   END
+ #  FOR    ${element}    IN    @{my_list}
+ #       log to console   ${element}
+ #  END
+
    common.Click For Element     ${WORKSPACE_EDIT_BUTTON}
    common.Click For Element     ${DELETE_WORKSPACE_BUTTON}
    ${text}=   Get Element Attribute    ${DELETE_WORKSPACE_FIELD}   placeholder
@@ -68,6 +69,8 @@ Delete workspace
    sleep    2s
    [Arguments]                      ${WorkspaceName}
    @{my_list}=    Get Webelements    ${WORKSPACE_LIST}
+    wait until page contains element    ${RATING}
+    common.Click For Element       ${RATING}
    FOR    ${element}    IN    @{my_list}
         ${text}=    Get Text    ${element}
         ${str}=    Set Variable    ${text}
@@ -76,18 +79,51 @@ Delete workspace
         IF  "${Id}[0]" == "${WorkspaceName}"
              common.Click For Element    //*[text()='${Id}[0]']
              log to console     "Workspace Selected"
-             wait until page contains element    ${RATING}
-             common.Click For Element       ${RATING}
-             sleep  2s
+           #  sleep  2s
              common.Click For Element     ${WORKSPACE_EDIT_BUTTON}
              common.Click For Element     ${DELETE_WORKSPACE_BUTTON}
              ${text}=   Get Element Attribute    ${DELETE_WORKSPACE_FIELD}   placeholder
-             log to console   ${text}
-             common.Input For Text       ${DELETE_WORKSPACE_FIELD}      ${text}
+             log to console   "Attribute"
+             log to console    ${text}
+             log to console   "Attribute"
+             common.Input For Text       ${DELETE_WORKSPACE_FIELD}      ${WorkspaceName}
              common.Click For Element     ${CONFIRMATION_BUTTON}
              Exit For Loop
+
         END
+
    END
+
+Delete Allworkspace
+   sleep    2s
+ #  [Arguments]                      ${WorkspaceName}
+   @{my_list}=    Get Webelements    ${WORKSPACE_LIST}
+    wait until page contains element    ${RATING}
+    common.Click For Element       ${RATING}
+   FOR    ${element}    IN    @{my_list}
+        ${text}=    Get Text    ${element}
+        ${str}=    Set Variable    ${text}
+        ${Id}=    split string     ${str}    \n
+        log to console     ${Id}[0]
+        IF  "${Id}[0]" == "${Id}[0]"
+             common.Click For Element    //*[text()='${Id}[0]']
+             log to console     "Workspace Selected"
+           #  sleep  2s
+             common.Click For Element     ${WORKSPACE_EDIT_BUTTON}
+             common.Click For Element     ${DELETE_WORKSPACE_BUTTON}
+             ${text}=   Get Element Attribute    ${DELETE_WORKSPACE_FIELD}   placeholder
+             log to console   "Attribute"
+             log to console    ${text}
+             log to console   "Attribute"
+             common.Input For Text       ${DELETE_WORKSPACE_FIELD}      ${Id}[0]
+             common.Click For Element     ${CONFIRMATION_BUTTON}
+             sleep    2s
+          #   Exit For Loop
+
+        END
+
+   END
+
 
 Get workspacesw number
    @{my_list}=    Get Webelements    WORKSPACE_LIST
